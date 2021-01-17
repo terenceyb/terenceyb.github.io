@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://terenceyb.github.io</id>
+    <id>https://https://chenrui.netlify.com/</id>
     <title>原驳</title>
-    <updated>2021-01-17T11:02:22.370Z</updated>
+    <updated>2021-01-17T11:32:55.288Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://terenceyb.github.io"/>
-    <link rel="self" href="https://terenceyb.github.io/atom.xml"/>
+    <link rel="alternate" href="https://https://chenrui.netlify.com/"/>
+    <link rel="self" href="https://https://chenrui.netlify.com/atom.xml"/>
     <subtitle>你所见即是我，好与坏我都不反驳。</subtitle>
-    <logo>https://terenceyb.github.io/images/avatar.png</logo>
-    <icon>https://terenceyb.github.io/favicon.ico</icon>
+    <logo>https://https://chenrui.netlify.com/images/avatar.png</logo>
+    <icon>https://https://chenrui.netlify.com/favicon.ico</icon>
     <rights>All rights reserved 2021, 原驳</rights>
     <entry>
         <title type="html"><![CDATA[Hello Gridea]]></title>
-        <id>https://terenceyb.github.io/post/hello-gridea/</id>
-        <link href="https://terenceyb.github.io/post/hello-gridea/">
+        <id>https://https://chenrui.netlify.com/post/hello-gridea/</id>
+        <link href="https://https://chenrui.netlify.com/post/hello-gridea/">
         </link>
         <updated>2018-12-11T16:00:00.000Z</updated>
         <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
