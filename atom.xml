@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://terenceyb.github.io</id>
     <title>原驳</title>
-    <updated>2021-01-20T11:29:06.798Z</updated>
+    <updated>2021-01-20T12:00:42.206Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://terenceyb.github.io"/>
     <link rel="self" href="https://terenceyb.github.io/atom.xml"/>
@@ -63,12 +63,12 @@
         </link>
         <updated>2021-01-20T10:55:55.000Z</updated>
         <summary type="html"><![CDATA[<figure data-type="image" tabindex="1"><img src="https://terenceyb.oss-cn-beijing.aliyuncs.com/img/%E5%8D%9A%E5%AE%A2%E5%A4%A7%E4%BA%8B%E8%AE%B0.png" alt="" loading="lazy"></figure>
-<p><strong>📅 2021年1月20日</strong></p>
 ]]></summary>
         <content type="html"><![CDATA[<figure data-type="image" tabindex="1"><img src="https://terenceyb.oss-cn-beijing.aliyuncs.com/img/%E5%8D%9A%E5%AE%A2%E5%A4%A7%E4%BA%8B%E8%AE%B0.png" alt="" loading="lazy"></figure>
-<p><strong>📅 2021年1月20日</strong></p>
 <!-- more -->
+<p><strong>📅 2021年1月20日</strong></p>
 <ol>
+<li>增加友情链接功能，欢迎各位小伙伴申请友链（网站、微博、知乎、github等平台链接均可申请）</li>
 <li>利用阿里云对象存储（OSS）平台启用图床托管</li>
 <li>发布第一篇博文：<a href="https://terenceyb.space/post/hello-blog/">Hello，Blog! </a></li>
 </ol>
