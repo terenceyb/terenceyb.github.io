@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://terenceyb.github.io</id>
     <title>原驳</title>
-    <updated>2021-01-20T07:26:20.322Z</updated>
+    <updated>2021-01-20T10:58:51.603Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://terenceyb.github.io"/>
     <link rel="self" href="https://terenceyb.github.io/atom.xml"/>
@@ -15,7 +15,7 @@
         <id>https://terenceyb.github.io/post/hello-blog/</id>
         <link href="https://terenceyb.github.io/post/hello-blog/">
         </link>
-        <updated>2021-01-18T14:30:02.000Z</updated>
+        <updated>2021-01-20T10:58:47.000Z</updated>
         <summary type="html"><![CDATA[<p>👏  欢迎访问 <strong>原驳Blog</strong> ！<br>
 ✍️  这是一个静态博客网站，博主和相关介绍请移步至<strong>关于这里</strong>栏目，在这里，记录了我的生活、笔记、知识、见闻，希望能与有幸到访本站的各位朋友交流思想，互学知识... ...</p>
 ]]></summary>
@@ -41,28 +41,50 @@
 </ol>
 </li>
 </ul>
-<h2 id="栏目简介">栏目简介👇</h2>
-<p>📝  <strong>探索世界</strong></p>
-<p>内容待补充哦~</p>
-<p>🌉  <strong>翻译学习</strong></p>
-<p>内容待补充哦~</p>
-<p>🏷️  <strong>成长日志</strong></p>
-<p>内容待补充哦~</p>
-<p>📋   <strong>关于这里</strong></p>
-<p>内容待补充哦~</p>
 <h2 id="一些叮嘱">一些叮嘱😉</h2>
 <ol>
-<li>你可以在<strong>任一浏览器</strong> 打开网址 <strong>http://terenceyb.space</strong> 来访问本站；</li>
-<li>你可以通过文章下方的 <strong>评论</strong>功能向博主和所有用户交流你的观点和看法；</li>
-<li>你可以通过进入<strong>关于这里</strong>页面，寻找博主的联系方式和反馈渠道，期待你的来信~</li>
+<li>您可以在<strong>任一浏览器</strong> 打开网址 <strong>http://terenceyb.space</strong> 来访问本站；</li>
+<li>您可以通过每篇文章下方的<strong>评论</strong>功能向博主和所有来访者交流你的观点和看法；</li>
+<li>您可以通过进入<strong>关于这里</strong>页面，寻找博主的联系方式和反馈渠道，期待你的来信~</li>
 </ol>
 <h2 id="表示歉意">表示歉意😫</h2>
 <ol>
-<li>由于本站托管在国外网络平台，偶有出现连接缓慢的情况，请大家谅解；</li>
-<li>博主非计算机专业，网站也许会有一些小毛病，还请大家指正~</li>
+<li>由于本站托管在国外平台，偶有出现连接缓慢的情况，请大家谅解；</li>
+<li>博主非计算机专业，网站也许会有一些小毛病，还请大家批评指正~</li>
 </ol>
-<p>🌱 当然这个博客还很年轻，有很多不足，但请相信，它会不停向前 🏃</p>
+<p>🌱 虽然这个博客还很年轻，但请相信，It will be better and better. 🏃</p>
 <p>💪一起加油！！！</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[博客大事记]]></title>
+        <id>https://terenceyb.github.io/post/events/</id>
+        <link href="https://terenceyb.github.io/post/events/">
+        </link>
+        <updated>2021-01-20T10:55:55.000Z</updated>
+        <summary type="html"><![CDATA[<figure data-type="image" tabindex="1"><img src="https://terenceyb.oss-cn-beijing.aliyuncs.com/img/%E5%8D%9A%E5%AE%A2%E5%A4%A7%E4%BA%8B%E8%AE%B0.png" alt="" loading="lazy"></figure>
+<p><strong>📅 2021年1月20日</strong></p>
+]]></summary>
+        <content type="html"><![CDATA[<figure data-type="image" tabindex="1"><img src="https://terenceyb.oss-cn-beijing.aliyuncs.com/img/%E5%8D%9A%E5%AE%A2%E5%A4%A7%E4%BA%8B%E8%AE%B0.png" alt="" loading="lazy"></figure>
+<p><strong>📅 2021年1月20日</strong></p>
+<!-- more -->
+<ol>
+<li>利用阿里云对象存储（OSS）平台启用图床托管</li>
+<li>发布第一篇博文：<a href="https://terenceyb.space/post/hello-blog/">Hello，Blog! </a></li>
+</ol>
+<p><strong>📅 2021年1月19日</strong></p>
+<ol>
+<li>优化网站底部信息</li>
+<li>为logo部分添加指向首页的功能</li>
+</ol>
+<p><strong>📅 2021年1月18日</strong></p>
+<ol>
+<li>启用MySSL安全认证，用户访问本站更加安全</li>
+<li>采用Valine插件启用评论版块</li>
+<li>修复重要Bug：使用Microsoft Edge浏览器打开网站，样式显示异常的问题。</li>
+</ol>
+<p><strong>📅 2021年1月17日</strong></p>
+<p>本站开始搭建：Gridea + Github + 腾讯云</p>
 ]]></content>
     </entry>
 </feed>
