@@ -1,0 +1,328 @@
+<html>
+<head>
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <meta charset="utf-8"/>
+<meta name="description" content=""/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<title>CAT | Transmate 使用教程（1） | 原驳</title>
+
+<link rel="shortcut icon" href="<https://terenceyb.oss-cn-beijing.aliyuncs.com/img/logo.png>/favicon.ico?v=1611329683815">
+      <!--%= themeConfig.domain %-->
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://terenceyb.github.io/styles/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dockerfile.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dart.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/moment@2.27.0/moment.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js"></script>
+<!-- DEMO JS -->
+<!--<script src="media/scripts/index.js"></script>-->
+
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.css">
+</head>
+<body>
+<div class="main gt-bg-theme-color-first">
+    <nav class="navbar navbar-expand-lg">
+    <div class="navbar-brand">
+        <a href="https://terenceyb.space/" target="_blank">
+            <img class="user-avatar" src="https://terenceyb.oss-cn-beijing.aliyuncs.com/img/logo.png" alt="头像">
+            <div class="site-name gt-c-content-color-first">
+                原驳
+        </a>
+        </div>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars gt-c-content-color-first" style="font-size: 18px"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav mr-auto" style="text-align: center">
+            
+                <div class="nav-item">
+                    
+                        <a href="/" class="menu gt-a-link">
+                            首 页
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/archives" class="menu gt-a-link">
+                            归 档
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/tags" class="menu gt-a-link">
+                            版 块
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/covid-map" class="menu gt-a-link">
+                            疫情地图
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/friends" class="menu gt-a-link">
+                            友 链
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/post/about" class="menu gt-a-link">
+                            关 于
+                        </a>
+                    
+                </div>
+            
+        </div>
+        <div style="text-align: center">
+            <form id="gridea-search-form" style="position: relative" data-update="1611329683815" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
+                <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
+            </form>
+        </div>
+    </div>
+</nav>
+
+    <div class="post-container">
+        <div class="post-detail gt-bg-theme-color-second">
+            <article class="gt-post-content">
+                <h2 class="post-title">
+                    CAT | Transmate 使用教程（1）
+                </h2>
+                <div class="post-info">
+                    <time class="post-time gt-c-content-color-first">
+                        · 2021-01-22 ·
+                    </time>
+                    
+                        <a href="https://terenceyb.github.io/tag/transtech/" class="post-tags">
+                            # 翻译技术
+                        </a>
+                    
+                </div>
+                <div class="post-content">
+                    <p>Transmate单机版是免费提供给个人译员使用的辅助翻译软件。Transmate单机版集翻译记忆、自动排版、在线翻译、低错检查、支持Trado记忆库、支持多种文件格式、支持多种语言等功能于一体，最大限度减少重复翻译工作量、提高翻译效率、确保译文的统一性。<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup></p>
+<!-- more -->
+<figure data-type="image" tabindex="1"><img src="https://terenceyb.oss-cn-beijing.aliyuncs.com/img/Transmate%E6%95%99%E7%A8%8B.png" alt="" loading="lazy"></figure>
+<h1 id="一-软件介绍">一、 软件介绍</h1>
+<p>Transmate单机版是免费提供给个人译员使用的辅助翻译软件。集翻译记忆、自动排版、在线翻译、低错检查、支持Trado记忆库、支持多种文件格式、支持多种语言等功能于一体，最大限度减少重复翻译工作量、提高翻译效率、确保译文的统一性。</p>
+<p>相比于大家熟知的SDL Trados，Déjà Vu等市面常见的CAT软件来说，Transmate有以下几点好处：</p>
+<ol>
+<li>个人免费使用<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup></li>
+<li>实时翻译记忆与模糊匹配<sup class="footnote-ref"><a href="#fn3" id="fnref3">[3]</a></sup></li>
+<li>导出对照文件：Transmate单机版支持导出对照文和纯译文的稿件。</li>
+<li>全面的语料库管理：可以对本地的术语库记忆库进行管理，无功能限制。</li>
+<li>拼写检查：翻译过程中，自动进行检查，有误的将以红色波浪形提示出来。</li>
+<li>低错检查：一键检查一些低级错误，如标签未插入、漏译、数字不一致、括号、标点符号等错误。</li>
+<li>在线翻译：内嵌有道翻译和百度翻译，用户可自行设置API。</li>
+<li>支持导入和导出Trados记忆库：Transmate单机版兼容Trados记忆库，可以入TMX和sdltm以及导出TMX。</li>
+</ol>
+<h1 id="二-软件安装">二、软件安装</h1>
+<ol>
+<li>下载地址：<a href="http://www.uedrive.com/products/standalone/">http://www.uedrive.com/products/standalone/</a></li>
+</ol>
+<figure data-type="image" tabindex="2"><img src="https://terenceyb.oss-cn-beijing.aliyuncs.com/img/transmate%E7%BD%91%E7%AB%99.jpeg" alt="" loading="lazy"></figure>
+<p>   <em>备注：本程序需要微软.NET Framework 4.0库，如果安装后无法正常使用请下载并安装.NET Framework 4.0运行库</em></p>
+<ol>
+<li>双击下载好的Transmate V.*.*.*.exe安装包，按照提示将软件安装好</li>
+<li>在安装过程中 ，尽量不要将程序安装到系统盘。</li>
+<li>安装完毕。</li>
+</ol>
+<h1 id="三-软件操作">三、软件操作</h1>
+<h2 id="1-双击桌面transmate图标打开程序如图">1. 双击桌面Transmate图标打开程序（如图）</h2>
+<p><img src="https://terenceyb.oss-cn-beijing.aliyuncs.com/img/2021-01-22_215650.png" alt="" loading="lazy"><br>
+<strong>下面是各功能区的主要命名（为便于后续讲解，各功能区名称为博主自行命名，可能与官方称呼有出入。</strong>）<br>
+<img src="https://terenceyb.oss-cn-beijing.aliyuncs.com/img/2021-01-22_215650%E6%A0%87%E6%B3%A8.png" alt="" loading="lazy"></p>
+<center>
+<p><strong>下面我将根据选项卡由左至右的顺序讲解各个功能的使用方法</strong></p>
+</center>
+<h2 id="2-项-目">2. 项 目</h2>
+<h3 id="1该选项卡下共有7个标签页如图">（1）该选项卡下共有7个标签页（如图）</h3>
+<figure data-type="image" tabindex="3"><img src="https://terenceyb.oss-cn-beijing.aliyuncs.com/img/20210122221843.png" alt="" loading="lazy"></figure>
+<h4 id="1我的项目和创建项目">1）我的项目和创建项目</h4>
+<p><strong>1</strong> 在打开软件时，系统默认加载“我的项目”，在使用其他功能时“我的项目”会常驻项目选项卡，方便用户点击“我的项目”切换到其他项目进行操作。<br>
+<strong>2</strong> 点击创建项目，会弹出如下图所示的窗口<br>
+<img src="https://terenceyb.oss-cn-beijing.aliyuncs.com/img/20210122222551.png" alt="" loading="lazy"><br>
+   <em>1</em> 在项目名称中填写您的项目名称，例如：**医药集团传染病学文件翻译；<br>
+   <em>2</em> 点击您所需要的源语言及目标语言，右下角可选择是否将其设置为默认语言对，方便用户无需设置该步骤，下次可直接使用；<br>
+   <em>3</em> 设置截止时间和客户，可及时完成目标任务；<br>
+   <em>4</em> 项目路径不建议选择系统盘，和安装时的盘符保持一致就可以；<br>
+   <em>5</em> 项目描述一般无需填写，视情况而定，可在其中标注客户的特殊需求或者注意事项等；<br>
+<img src="https://terenceyb.oss-cn-beijing.aliyuncs.com/img/20210122223418.png" alt="" loading="lazy"><br>
+<strong>3</strong> 点击下一步后，导入需要翻译的源语文件，点击下一步；<br>
+<strong>4</strong> 如有翻译记忆库可载入使用，如没有，点击下一步；<br>
+<strong>5</strong> 如有术语库可载入使用，如没有，点击完成；<br>
+<strong>6</strong> 载入后可以看到如下图所示界面<br>
+<img src="https://terenceyb.oss-cn-beijing.aliyuncs.com/img/20210122223950.png" alt="" loading="lazy"></p>
+<h4 id="2打开项目">2）打开项目</h4>
+<p><strong>1</strong> 双击项目，打开项目<br>
+<img src="https://terenceyb.oss-cn-beijing.aliyuncs.com/img/2021-01-22_224038.png" alt="" loading="lazy"><br>
+<strong>2</strong> 双击文件，打开文件<br>
+<strong>3</strong> 点击下方视频，查看翻译流程</p>
+<center>
+<iframe height=498 width=510 src='https://player.youku.com/embed/XNTA3ODU1MjYwNA==' frameborder=0 'allowfullscreen'></iframe>
+</center>
+<p><strong>4</strong> 翻译界面有着功能丰富的标签页，如：复制全文、预翻译（将在2中讲到）、译文格式等个性化功能，在这里就不再一一讲解，大家可以个性化使用；<br>
+<img src="https://terenceyb.oss-cn-beijing.aliyuncs.com/img/20210122232240.png" alt="" loading="lazy"><br>
+<strong>5</strong> 翻译好的双语文件可以有三种导出形式，分别是TMX、纯译文和双语对照版本，大家可以按需导出；</p>
+<h4 id="3修改信息-加载项目">3）修改信息、加载项目</h4>
+<p>点击修改信息，可修改项目的一些基本信息，包括：项目名称、截止时间、客户和项目描述<br>
+点击加载项目，可以将其他项目导入本地继续操作；</p>
+<h4 id="4打开项目文件夹">4）打开项目文件夹</h4>
+<p>点击打开项目文件夹，系统会自动将该项目所在磁盘位置打开，方便用户拷贝，移动等操作。</p>
+<h2 id="快捷键大全">快捷键大全</h2>
+<p><strong>翻译界面：</strong><br>
+Ctrl+s:保存<br>
+Ctrl+↑/↓：跳到上一行/下一行<br>
+Ctrl+Enter：将当前翻译内容保存进数据库，并跳到下一行<br>
+Ctrl+D：快速查词<br>
+Ctrl+Q：web搜索<br>
+Ctrl+T：添加术语<br>
+CtrL+数字（1-9，,0表示第10条）：获取‘翻译结果’对应的译文到译文行中<br>
+Ctrl+B：增加/删除加粗<br>
+Ctrl+I：增加/删除斜体<br>
+Ctrl+U：增加/删除下划线<br>
+Ctrl+C：复制<br>
+Ctrl+V：粘贴<br>
+Ctrl+A：全选<br>
+Ctrl+H：替换<br>
+Ctrl+Shift+F：查找<br>
+Ctrl+Z：撤销<br>
+Ctrl+C：复制<br>
+Alt+Insert：复制原文<br>
+Alt+Delete：删除译文<br>
+F3：相关搜索<br>
+<strong>其他：</strong><br>
+Alt+5：打开记忆库<br>
+Enter：拆分(双语对其)<br>
+Ctrl+F1：隐藏/显示功能区<br>
+F1：帮助</p>
+<center>
+<h2 id="to-be-continued">To Be Continued... ...</h2>
+</center>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>成都优译信息技术股份有限公司：<a href="http://www.uedrive.com/products/standalone/">http://www.uedrive.com/products/standalone/</a> <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn2" class="footnote-item"><p>优译信息技术提供的计算机辅助翻译软件Transmate单机版是单机使用，提供个人永久免费使用。 <a href="#fnref2" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn3" class="footnote-item"><p>当译员翻译完一个句子后，点击“下一句”或者使用快捷键Ctrl+Enter跳到下一行，软件会自动记忆该句的原文和译文并存储到预先设置的本地和服务器的记忆库中。当翻译后面的句子时，如果该句和记忆库中的某一个句子达到预设的匹配率，系统会在提示栏给出相应的提示，如果是100%匹配，则自动添加到对于的译文行中，译员可以直接使用或者根据需要进行修改。节省了译员查找的时间，保证了翻译思路的流畅。 <a href="#fnref3" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+
+                </div>
+            </article>
+        </div>
+
+        
+            <div class="next-post">
+                <div class="next gt-c-content-color-first">下一篇</div>
+                <a href="https://terenceyb.github.io/post/2020113B-A-CE/" class="post-title gt-a-link">
+                    2020年11月三笔 A卷 C-E
+                </a>
+            </div>
+        
+
+        
+            <span id="/post/transmate/" class="leancloud_visitors" data-flag-title="CAT | Transmate 使用教程（1）">
+                <em class="post-meta-item-text">阅读量 </em>
+                <i class="leancloud-visitors-count">0</i>
+            </span>
+        
+
+        
+
+        
+            <script src='https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js'></script>
+
+<style>
+	div#vcomments{
+		width:100%;
+		max-width: 1000px;
+		padding: 2.5%
+	}
+</style>
+
+
+	<div id="vcomments"></div>
+
+<script>
+	new Valine({
+		el: '#vcomments',
+		appId: 'fqYM5gDAudytPQTKnHhjCc46-gzGzoHsz',
+		appKey: 'sjre7BMPUvvrEb1Nm1rgDvN8',
+		avatar: 'robohash',
+		pageSize: 5,
+		recordIp: true,
+		placeholder: 'Just Go Go',
+		visitor: true,
+	});
+</script>
+
+        
+
+        <div class="site-footer gt-c-content-color-first">
+    <div class="slogan gt-c-content-color-first">原来每个灵魂都锈迹斑驳</div>
+    <div class="social-container">
+        
+            
+                <a href="https://github.com/terenceyb" target="_blank">
+                    <i class="fab fa-github gt-c-content-color-first"></i>
+                </a>
+            
+        
+            
+        
+            
+                <a href="https://weibo.com/Jerryziwen" target="_blank">
+                    <i class="fab fa-weibo gt-c-content-color-first"></i>
+                </a>
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+    </div>
+    <div class="footer-info">
+        2021 © Edited by <a href="https://terenceyb.space/" target="_blank">原驳</a>
+    </div>
+    <div>
+    <a href="https://myssl.com/seal/detail?domain=terenceyb.space" target="_blank">MySSL</a> | Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a href="https://terenceyb.github.io/atom.xml" target="_blank">RSS</a></a>
+    </div>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+    </div>
+</div>
+</body>
+</html>
