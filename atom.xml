@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://terenceyb.github.io</id>
     <title>原驳</title>
-    <updated>2021-01-22T04:35:27.818Z</updated>
+    <updated>2021-01-22T04:57:53.398Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://terenceyb.github.io"/>
     <link rel="self" href="https://terenceyb.github.io/atom.xml"/>
@@ -10,6 +10,15 @@
     <logo>https://terenceyb.github.io/images/avatar.png</logo>
     <icon>https://terenceyb.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, 原驳</rights>
+    <entry>
+        <title type="html"><![CDATA[疫情地图]]></title>
+        <id>https://terenceyb.github.io/post/yi-qing-di-tu/</id>
+        <link href="https://terenceyb.github.io/post/yi-qing-di-tu/">
+        </link>
+        <updated>2021-01-22T04:49:04.000Z</updated>
+        <content type="html"><![CDATA[<center><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=500 height=8000 src="https://voice.baidu.com/act/newpneumonia/newpneumonia"></iframe></center>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Hello Blog！]]></title>
         <id>https://terenceyb.github.io/post/hello-blog/</id>
