@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://terenceyb.github.io</id>
     <title>原驳</title>
-    <updated>2021-01-22T05:53:57.350Z</updated>
+    <updated>2021-01-22T05:58:47.957Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://terenceyb.github.io"/>
     <link rel="self" href="https://terenceyb.github.io/atom.xml"/>
@@ -10,15 +10,6 @@
     <logo>https://terenceyb.github.io/images/avatar.png</logo>
     <icon>https://terenceyb.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, 原驳</rights>
-    <entry>
-        <title type="html"><![CDATA[疫情地图]]></title>
-        <id>https://terenceyb.github.io/post/yi-qing-di-tu/</id>
-        <link href="https://terenceyb.github.io/post/yi-qing-di-tu/">
-        </link>
-        <updated>2021-01-22T04:49:04.000Z</updated>
-        <content type="html"><![CDATA[<center><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=500 height=8000 src="https://voice.baidu.com/act/newpneumonia/newpneumonia"></iframe></center>
-]]></content>
-    </entry>
     <entry>
         <title type="html"><![CDATA[Hello Blog！]]></title>
         <id>https://terenceyb.github.io/post/hello-blog/</id>
@@ -70,26 +61,27 @@
         <content type="html"><![CDATA[<figure data-type="image" tabindex="1"><img src="https://terenceyb.oss-cn-beijing.aliyuncs.com/img/%E5%8D%9A%E5%AE%A2%E5%A4%A7%E4%BA%8B%E8%AE%B0.png" alt="" loading="lazy"></figure>
 <!-- more -->
 <center><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=300 height=86 src="//music.163.com/outchain/player?type=2&id=1323301155&auto=1&height=66"></iframe></center>
-<p><strong>📍 2021年1月21日</strong></p>
+<p><strong>📌 2021年1月22日</strong></p>
+<p><strong>📌 2021年1月21日</strong></p>
 <p>修复发布端口故障</p>
-<p><strong>📍 2021年1月20日</strong></p>
+<p><strong>📌 2021年1月20日</strong></p>
 <ol>
 <li>增加友情链接功能，欢迎各位小伙伴申请友链（网站、微博、知乎、github等平台链接均可申请）</li>
 <li>利用阿里云对象存储（OSS）平台启用图床托管，提升了本站的图片加载速度。</li>
 <li>发布第一篇博文：<a href="https://terenceyb.space/post/hello-blog/">Hello，Blog! </a></li>
 </ol>
-<p><strong>📍 2021年1月19日</strong></p>
+<p><strong>📌 2021年1月19日</strong></p>
 <ol>
 <li>优化网站底部信息</li>
 <li>为logo部分添加指向首页的功能</li>
 </ol>
-<p><strong>📍 2021年1月18日</strong></p>
+<p><strong>📌 2021年1月18日</strong></p>
 <ol>
 <li>启用MySSL国际安全认证，用户访问本站会更加安全</li>
 <li>采用Valine插件启用评论版块</li>
 <li>修复重要Bug：使用Microsoft Edge浏览器打开网站，样式显示异常的问题。</li>
 </ol>
-<p><strong>📍 2021年1月17日</strong></p>
+<p><strong>📌 2021年1月17日</strong></p>
 <p>本站开始搭建：Gridea + Github + 阿里云</p>
 ]]></content>
     </entry>
