@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="/styles/main.min.css">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css">
+
+
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+
+
+<style>:root { --heatmap-color: #39d353; }</style>
+
+
+
+<style>
+  .theme-toggle-sun  { display: flex; }
+  .theme-toggle-moon { display: none; }
+  :root.theme-light .theme-toggle-sun  { display: none; }
+  :root.theme-light .theme-toggle-moon { display: flex; }
+</style>
+
+
+<script>
+  (function () {
+    try {
+      var saved = localStorage.getItem('flavor-theme');
+      var theme = saved || 'dark';
+      if (theme === 'light') {
+        document.documentElement.classList.add('theme-light');
+      }
+    } catch (e) { }
+  })();
+</script>
+  <meta name="generator" content="Gridea Pro 1.3.0-beta.2">
+  <title>Interplab-口译训练平台 PRD（v1.1） | Evan&#39;s Blog</title>
+  
+<meta property="og:title" content="Interplab-口译训练平台 PRD（v1.1）" />
+<meta property="og:type" content="article" />
+
+<meta property="og:image" content="https://blog-1257076412.cos.ap-beijing.myqcloud.com/InterpLab%E4%BA%A7%E5%93%81%E7%BD%91%E7%AB%99%E5%B1%95%E7%A4%BA%E5%9B%BE%E7%94%9F%E6%88%90.png" />
+
+
+<meta name="description" content="让口译自学者把每一次练习，都变成可复盘、可对比、可改进的证据。 InterpLab 是一款个人口译自学训练与复盘工具，支持交替传译智能分段训练、带稿与无稿同声传译、影子练习。以双轨波形对齐回&amp;hellip;">
+<link rel="canonical" href="https://blog.evanhub.cn/post/interplabprdv1.1/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Interplab-口译训练平台 PRD（v1.1）","url":"https://blog.evanhub.cn/post/interplabprdv1.1/","description":"让口译自学者把每一次练习，都变成可复盘、可对比、可改进的证据。 InterpLab 是一款个人口译自学训练与复盘工具，支持交替传译智能分段训练、带稿与无稿同声传译、影子练习。以双轨波形对齐回\u0026hellip;","image":"https://blog-1257076412.cos.ap-beijing.myqcloud.com/InterpLab%E4%BA%A7%E5%93%81%E7%BD%91%E7%AB%99%E5%B1%95%E7%A4%BA%E5%9B%BE%E7%94%9F%E6%88%90.png","datePublished":"2026-11-08T22:24:39+08:00","dateModified":"2026-11-08T22:24:39+08:00","author":{"@type":"Person","name":"Evan's Blog"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"Evan's Blog"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://blog.evanhub.cn","name":"Evan's Blog","position":1},{"@type":"ListItem","item":"https://blog.evanhub.cn/post/interplabprdv1.1/","name":"Interplab-口译训练平台 PRD（v1.1）","position":2}]}</script>
+<meta property="og:title" content="Interplab-口译训练平台 PRD（v1.1）">
+<meta property="og:description" content="让口译自学者把每一次练习，都变成可复盘、可对比、可改进的证据。 InterpLab 是一款个人口译自学训练与复盘工具，支持交替传译智能分段训练、带稿与无稿同声传译、影子练习。以双轨波形对齐回&amp;hellip;">
+<meta property="og:url" content="https://blog.evanhub.cn/post/interplabprdv1.1/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Evan's Blog">
+<meta property="og:image" content="https://blog-1257076412.cos.ap-beijing.myqcloud.com/InterpLab%E4%BA%A7%E5%93%81%E7%BD%91%E7%AB%99%E5%B1%95%E7%A4%BA%E5%9B%BE%E7%94%9F%E6%88%90.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://blog.evanhub.cn/post/interplabprdv1.1/">
+<meta name="twitter:title" content="Interplab-口译训练平台 PRD（v1.1）">
+<meta name="twitter:description" content="让口译自学者把每一次练习，都变成可复盘、可对比、可改进的证据。 InterpLab 是一款个人口译自学训练与复盘工具，支持交替传译智能分段训练、带稿与无稿同声传译、影子练习。以双轨波形对齐回&amp;hellip;">
+<meta name="twitter:image" content="https://blog-1257076412.cos.ap-beijing.myqcloud.com/InterpLab%E4%BA%A7%E5%93%81%E7%BD%91%E7%AB%99%E5%B1%95%E7%A4%BA%E5%9B%BE%E7%94%9F%E6%88%90.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#ffffff">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Evan's Blog">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/icons/icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/images/icons/icon-192x192.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/images/icons/icon-192x192.png">
+<script>if('serviceWorker' in navigator){navigator.serviceWorker.register('/sw.js')}</script>
+</head>
+<body class="flavor-theme">
+
+  <header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <div class="top-bar">
+
+      
+      <div class="top-bar__left">
+        
+        <a href="https://blog.evanhub.cn" class="site-avatar-link" aria-label="返回首页">
+          <img class="site-avatar" src="https://blog-1257076412.cos.ap-beijing.myqcloud.com/logo.jpg" alt="Evan&#39;s Blog" />
+        </a>
+        
+        <a href="https://blog.evanhub.cn" class="site-name-link">Evan&#39;s Blog</a>
+      </div>
+
+      
+      <nav class="top-bar__nav" id="sectionBar">
+        
+        
+        <a class="nav-item" href="/">首页</a>
+        
+        <a class="nav-item" href="/post">博客</a>
+        
+        <a class="nav-item" href="/memos">闪念</a>
+        
+        <a class="nav-item" href="/archives">归档</a>
+        
+        <a class="nav-item" href="/tags">标签</a>
+        
+        <a class="nav-item" href="https://blog.evanhub.cn/interplab/">Interplab</a>
+        
+        <a class="nav-item" href="/links">友链</a>
+        
+        <a class="nav-item" href="/post/about">关于</a>
+        
+        
+      </nav>
+
+      
+      <div class="top-bar__right">
+        <button class="btn-icon btn-search search-btn" id="btnSearch" type="button" aria-label="搜索">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+        <button class="btn-icon theme-toggle theme-toggle-sun" id="themeToggleSun" type="button"
+          aria-label="切换到浅色模式">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 1C12.5523 1 13 1.44772 13 2V4C13 4.55228 12.5523 5 12 5C11.4477 5 11 4.55228 11 4V2C11 1.44772 11.4477 1 12 1Z"></path>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M7 12C7 9.23858 9.23858 7 12 7C14.7614 7 17 9.23858 17 12C17 14.7614 14.7614 17 12 17C9.23858 17 7 14.7614 7 12ZM12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9Z"></path>
+            <path d="M13 20C13 19.4477 12.5523 19 12 19C11.4477 19 11 19.4477 11 20V22C11 22.5523 11.4477 23 12 23C12.5523 23 13 22.5523 13 22V20Z"></path>
+            <path d="M4.22282 4.22289C4.61335 3.83236 5.24651 3.83236 5.63704 4.22289L7.04704 5.63289C7.43756 6.02341 7.43756 6.65658 7.04704 7.0471C6.65651 7.43762 6.02335 7.43762 5.63283 7.0471L4.22282 5.6371C3.8323 5.24658 3.8323 4.61341 4.22282 4.22289Z"></path>
+            <path d="M18.367 16.9529C17.9765 16.5623 17.3433 16.5623 16.9528 16.9529C16.5623 17.3434 16.5623 17.9766 16.9528 18.3671L18.3628 19.7771C18.7533 20.1676 19.3865 20.1676 19.777 19.7771C20.1675 19.3866 20.1675 18.7534 19.777 18.3629L18.367 16.9529Z"></path>
+            <path d="M1 12C1 11.4477 1.44772 11 2 11H4C4.55228 11 5 11.4477 5 12C5 12.5523 4.55228 13 4 13H2C1.44772 13 1 12.5523 1 12Z"></path>
+            <path d="M20 11C19.4477 11 19 11.4477 19 12C19 12.5523 19.4477 13 20 13H22C22.5523 13 23 12.5523 23 12C23 11.4477 22.5523 11 22 11H20Z"></path>
+            <path d="M7.04704 16.9529C7.43756 17.3434 7.43756 17.9766 7.04704 18.3671L5.63704 19.7771C5.24651 20.1676 4.61335 20.1676 4.22282 19.7771C3.8323 19.3866 3.8323 18.7534 4.22283 18.3629L5.63283 16.9529C6.02335 16.5623 6.65651 16.5623 7.04704 16.9529Z"></path>
+            <path d="M19.777 5.6371C20.1675 5.24657 20.1675 4.61341 19.777 4.22289C19.3865 3.83236 18.7533 3.83236 18.3628 4.22289L16.9528 5.63289C16.5623 6.02341 16.5623 6.65658 16.9528 7.0471C17.3433 7.43762 17.9765 7.43762 18.367 7.0471L19.777 5.6371Z"></path>
+          </svg>
+        </button>
+        <button class="btn-icon theme-toggle theme-toggle-moon" id="themeToggleMoon" type="button"
+          aria-label="切换到深色模式">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C10.0222 2 8.08879 2.58649 6.4443 3.6853C4.79981 4.78412 3.51809 6.3459 2.76121 8.17317C2.00433 10.0004 1.8063 12.0111 2.19215 13.9509C2.578 15.8907 3.53041 17.6725 4.92894 19.0711C6.32746 20.4696 8.10929 21.422 10.0491 21.8079C11.9889 22.1937 13.9996 21.9957 15.8268 21.2388C17.6541 20.4819 19.2159 19.2002 20.3147 17.5557C21.4135 15.9112 22 13.9778 22 12C22 11.5955 21.7564 11.2309 21.3827 11.0761C21.009 10.9213 20.5789 11.0069 20.2929 11.2929C19.287 12.2988 17.9226 12.864 16.5 12.864C15.0774 12.864 13.713 12.2988 12.7071 11.2929C11.7012 10.287 11.136 8.92261 11.136 7.5C11.136 6.07739 11.7012 4.71304 12.7071 3.70711C12.9931 3.42111 13.0787 2.99099 12.9239 2.61732C12.7691 2.24364 12.4045 2 12 2ZM7.55544 5.34824C8.27036 4.87055 9.05353 4.51389 9.87357 4.28778C9.39271 5.27979 9.13604 6.37666 9.13604 7.5C9.13604 9.45304 9.91189 11.3261 11.2929 12.7071C12.6739 14.0881 14.547 14.864 16.5 14.864C17.6233 14.864 18.7202 14.6073 19.7122 14.1264C19.4861 14.9465 19.1295 15.7296 18.6518 16.4446C17.7727 17.7602 16.5233 18.7855 15.0615 19.391C13.5997 19.9965 11.9911 20.155 10.4393 19.8463C8.88743 19.5376 7.46197 18.7757 6.34315 17.6569C5.21447 16.538 4.4624 15.1126 4.15372 13.5607C3.84504 12.0089 4.00347 10.4003 4.60897 8.93853C5.21447 7.47672 6.23985 6.22729 7.55544 5.34824Z"></path>
+            <path d="M19 2C19.5523 2 20 2.44772 20 3V4H21C21.5523 4 22 4.44772 22 5C22 5.55228 21.5523 6 21 6H20V7C20 7.55228 19.5523 8 19 8C18.4477 8 18 7.55228 18 7V6H17C16.4477 6 16 5.55228 16 5C16 4.44772 16.4477 4 17 4H18V3C18 2.44772 18.4477 2 19 2Z"></path>
+          </svg>
+        </button>
+        <button class="btn-icon btn-nav-toggle mobile-only" id="btnNavToggle" type="button" aria-label="切换导航">
+          <div class="hamburger" id="hamburger">
+            <span class="hamburger__line hamburger__line--top"></span>
+            <span class="hamburger__line hamburger__line--bottom"></span>
+          </div>
+        </button>
+      </div>
+
+    </div>
+  </div>
+</header>
+
+
+<div class="header-spacer"></div>
+
+<script>
+(function(){
+  var btn = document.getElementById('btnNavToggle');
+  var nav = document.getElementById('sectionBar');
+  var hamburger = document.getElementById('hamburger');
+  if (btn && nav) {
+    btn.addEventListener('click', function(){
+      nav.classList.toggle('top-bar__nav--open');
+      if (hamburger) hamburger.classList.toggle('is-active');
+    });
+    nav.querySelectorAll('.nav-item').forEach(function(item){
+      item.addEventListener('click', function(){
+        nav.classList.remove('top-bar__nav--open');
+        if (hamburger) hamburger.classList.remove('is-active');
+      });
+    });
+  }
+
+  var root = document.documentElement;
+  var applyTheme = function(theme, persist){
+    if (theme === 'light') {
+      root.classList.add('theme-light');
+    } else {
+      root.classList.remove('theme-light');
+    }
+    if (persist) {
+      try { localStorage.setItem('flavor-theme', theme); } catch (e) {}
+    }
+  };
+  document.querySelectorAll('.theme-toggle').forEach(function(el){
+    el.addEventListener('click', function(){
+      applyTheme(root.classList.contains('theme-light') ? 'dark' : 'light', true);
+    });
+  });
+})();
+</script>
+
+  <main class="site-main" role="main">
+    
+<article class="article-container">
+  <header class="article-header">
+    <h1 class="article-title">Interplab-口译训练平台 PRD（v1.1）</h1>
+    <div class="article-meta">
+      
+      <span class="article-meta__item">2026-11-08</span>
+      
+      <span class="article-meta__sep">·</span>
+      <span class="article-meta__item">17 分钟阅读</span>
+      
+    </div>
+    
+  </header>
+
+  
+  <div class="article-feature">
+    <img src="https://blog-1257076412.cos.ap-beijing.myqcloud.com/InterpLab%E4%BA%A7%E5%93%81%E7%BD%91%E7%AB%99%E5%B1%95%E7%A4%BA%E5%9B%BE%E7%94%9F%E6%88%90.png" alt="Interplab-口译训练平台 PRD（v1.1）" />
+  </div>
+  
+
+  <div class="article-content">
+    <blockquote>
+<p><span style="color: #0f1115; font-size: 16px">让口译自学者把每一次练习，都变成可复盘、可对比、可改进的证据。</span></p>
+<p><span style="color: #0f1115; font-size: 16px">InterpLab 是一款个人口译自学训练与复盘工具，支持交替传译智能分段训练、带稿与无稿同声传译、影子练习。以双轨波形对齐回放、时间锚点标记和可解释评估线索为核心，让每一次口译练习都留下可定位、可对比、可改进的证据。</span></p>
+</blockquote>
+<p><strong>体验地址：<a href="https://blog.evanhub.cn/interplab/">InterpLab · 口译训练工作台</a></strong></p>
+<h2 id="heading">文档信息</h2>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>文档版本</td>
+<td>v1.1</td>
+</tr>
+<tr>
+<td>产品名称（暂定）</td>
+<td>InterpLab · 口译自学训练与复盘工作台</td>
+</tr>
+<tr>
+<td>文档状态</td>
+<td>修订稿</td>
+</tr>
+<tr>
+<td>目标读者</td>
+<td>产品、设计、前端/后端/算法、测试</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="1-">1. 产品概述与目标</h2>
+<h3 id="11-">1.1 背景</h3>
+<p>口译能力的提升依赖“练习—回听—识别问题—针对性改进”的循环。现有工具大多只解决“播放+录音”的浅层需求：交替传译分段靠手动拖拽，同声传译带稿模式缺乏文本与音频的同步锚定，复盘时源语与译语无法在时间轴上对齐比对。自学者往往在练习结束后陷入“听了，但不知道该改什么”的困境。</p>
+<p>本产品定位为<strong>面向个人口译学习者的浏览器端自学训练与复盘平台</strong>，覆盖交替传译、带稿同声传译、无稿同声传译三种核心训练形态，并以“智能分段—双轨记录—结构化复盘—个人成长追踪”为主轴，补充影子练习、EVS 调节、术语库、训练计划等能力，形成完整的个人训练闭环。</p>
+<h3 id="12-">1.2 产品目标</h3>
+<p><strong>用户目标</strong>：让每一次口译练习都能留下可回看、可定位、可对比的证据，使自学者从“凭感觉练”转向“基于证据改”。</p>
+<p><strong>产品目标</strong>：成为口译自学者高频使用的个人训练工作台，覆盖备考、日常保持、专项突破等自学场景。</p>
+<h3 id="13-">1.3 目标用户</h3>
+<table>
+<thead>
+<tr>
+<th>用户</th>
+<th>描述</th>
+<th>核心诉求</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>口译自学者</td>
+<td>口译专业学生、备考 CATTI/NAATI 等考试者、职业译员日常保持训练、口译爱好者</td>
+<td>快速开始练习；清晰看到自己的问题；有可追踪的进步记录；无需依赖教师或同学</td>
+</tr>
+</tbody>
+</table>
+<p><strong>角色说明</strong>：产品仅设“学习者”单一角色。不设教师端、班级、任务布置、批阅、互评等功能。系统运维层面的后台管理不属于面向用户的产品角色，不在本 PRD 范围。</p>
+<h3 id="14-">1.4 设计原则</h3>
+<ul>
+<li><strong>复盘优先于练习</strong>：每次训练结束后必须产出可操作的回听与标注界面，而非仅保存录音文件。</li>
+<li><strong>分段服务于“句子”，而非“固定秒数”</strong>：交传拆分目标是语义完整的意群/句子，时长是约束条件，不是切割依据。</li>
+<li><strong>同传交互差异化</strong>：带稿同传的文本是导航工具；无稿同传界面应尽量减少认知负荷，两者不共用同一套训练界面。</li>
+<li><strong>AI 辅助，人来判断</strong>：自动评估只给线索和锚点，不给出误导性总分，最终判断权留给学习者自己。</li>
+<li><strong>个人数据默认私密</strong>：所有素材、录音、复盘记录默认仅本人可见，不设公开素材库与社交化展示。</li>
+</ul>
+<hr />
+<h2 id="2-">2. 功能范围总览</h2>
+<h3 id="21-">2.1 功能架构</h3>
+<pre><code class="language-text">InterpLab（单用户自学版）
+├── 个人素材与准备
+│   ├── 音频上传与管理
+│   ├── 文本稿件上传与对齐（带稿同传）
+│   ├── 个人术语库 / 生词本
+│   └── 训练参数配置
+├── 交替传译训练
+│   ├── 智能分段（时长浮动 + 句子边界）
+│   ├── 分段试听与手动微调
+│   └── 逐段“听—记—译—录”流程
+├── 同声传译训练
+│   ├── 带稿同传：文本滚动 / 高亮跟读 / 术语标记 / 文本遮挡
+│   ├── 无稿同传：极简训练界面 / EVS 提示 / 干扰音可选
+│   └── 影子练习：源语跟述 / 片语跟述 / EVS 目标
+├── 复盘工作台
+│   ├── 源语/译语双轨波形对比
+│   ├── 时间锚点标记与问题分类
+│   ├── 自动评估线索（流利度/忠实度/覆盖率）
+│   └── 笔记回放（可选）
+├── 个人成长
+│   ├── 训练历史与素材回炉对比
+│   ├── 个人趋势与问题类型分布
+│   ├── 训练计划与目标
+│   └── 复盘报告导出
+└── 系统与数据
+    ├── 单用户账号与跨设备同步（可选）
+    ├── 本地/云端存储策略
+    └── 数据导出与删除
+</code></pre>
+<hr />
+<h2 id="3-">3. 核心功能详细需求</h2>
+<h3 id="31-">3.1 个人素材与准备</h3>
+<h4 id="311-">3.1.1 音频上传与管理</h4>
+<p>用户可上传训练用源语音频，支持 MP3、WAV、M4A 等常见格式，单文件时长上限建议 60 分钟。上传后系统转码并生成波形预览与基础元信息（时长、采样率）。</p>
+<table>
+<thead>
+<tr>
+<th>编号</th>
+<th>功能</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A-01</td>
+<td>音频上传</td>
+<td>拖拽/点选上传，显示上传进度与转码状态</td>
+</tr>
+<tr>
+<td>A-02</td>
+<td>波形预览与首尾裁剪</td>
+<td>可裁剪首尾静音，避免训练时无意义等待</td>
+</tr>
+<tr>
+<td>A-03</td>
+<td>个人素材库</td>
+<td>用户可命名、打标签（主题、难度、口音、语速）、收藏、搜索</td>
+</tr>
+<tr>
+<td>A-04</td>
+<td>素材难度标注</td>
+<td>手动或由系统估算标注语速（WPM）和信息密度等级，供选材参考</td>
+</tr>
+<tr>
+<td>A-05</td>
+<td>本地素材模式（可选）</td>
+<td>支持仅在本地浏览器保存素材索引与录音，不上传云端；适合隐私敏感用户</td>
+</tr>
+</tbody>
+</table>
+<p><strong>说明</strong>：不设公开素材库、不设他人素材可见性设置。所有素材默认仅当前用户可见。</p>
+<h4 id="312-">3.1.2 文本稿件上传与对齐（带稿同传）</h4>
+<p>用户上传文字稿件，用于带稿同传。理想情况下稿件与音频实现时间对齐，使文本随音频进度逐句/逐词高亮。</p>
+<p><strong>对齐方式</strong>：</p>
+<ul>
+<li><strong>自动对齐（推荐）</strong>：若音频经过 ASR，可将 ASR 词级时间戳与上传稿件做文本匹配对齐；措辞差异采用模糊匹配与编辑距离对齐。</li>
+<li><strong>手动校准</strong>：自动对齐置信度低的句子，用户可在文本视图中点击句子后拖动音频进度条校准；系统记录校准后的时间锚点。</li>
+</ul>
+<h4 id="313-">3.1.3 个人术语库与生词本</h4>
+<p>术语准备是口译训练的前置环节，也是自学中高频出现的痛点。本模块贯穿素材准备、训练和复盘。</p>
+<table>
+<thead>
+<tr>
+<th>编号</th>
+<th>功能</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T-01</td>
+<td>个人术语库</td>
+<td>创建多个术语库（按主题/考试/客户），支持手动录入与 Excel/CSV 导入</td>
+</tr>
+<tr>
+<td>T-02</td>
+<td>从稿件提取术语</td>
+<td>上传带稿同传稿件后，系统提取候选术语（名词短语、专有名词、数字表达），用户勾选加入术语库</td>
+</tr>
+<tr>
+<td>T-03</td>
+<td>训练中术语高亮</td>
+<td>带稿同传界面高亮术语库命中的词条；无稿同传复盘时可标注术语使用情况</td>
+</tr>
+<tr>
+<td>T-04</td>
+<td>记忆卡片复习</td>
+<td>基于术语库生成闪卡，支持“已掌握/待复习”标记，形成训练外的轻量复习循环</td>
+</tr>
+<tr>
+<td>T-05</td>
+<td>生词本</td>
+<td>复盘标记为“用词不当/不认识”的词自动进入生词本；也可手动添加</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="32-">3.2 交替传译训练</h3>
+<h4 id="321---">3.2.1 智能分段：用户设定时长 + 句子边界浮动</h4>
+<p>这是产品关键差异化能力。用户输入“期望每段时长”（如 60 秒），系统不在第 60 秒硬切，而是在 60 秒附近的语义边界处断开。</p>
+<p><strong>处理流程</strong>：</p>
+<ol>
+<li><strong>VAD 语音活动检测</strong>：识别语音段与静音段，得到候选停顿区间。</li>
+<li><strong>ASR 词级时间戳</strong>：使用 Whisper 等模型获取词级时间戳；Whisper 原生分段基于时间戳预测而非语法句子边界，需应用层后处理重组。</li>
+<li><strong>句子边界候选生成</strong>：综合三类信号打分——标点符号（句号/问号/感叹号权重最高）、停顿长度（超过阈值的长静音）、句法完整性（主谓结构闭合或轻量 NLP 句子切分）。</li>
+<li><strong>浮动约束下的最优化选择</strong>：在用户设定时长 ± 浮动范围内选取边界得分最高的位置；若范围内无高置信边界，则向更远边界搜索，并标注“该段为近似切分”。</li>
+<li><strong>输出分段列表</strong>：每段包含起止时间、时长、ASR 文本（若有）、边界置信度。</li>
+</ol>
+<p><strong>用户可控参数</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>期望时长</td>
+<td>用户输入目标秒数（如 45s / 60s / 90s）</td>
+</tr>
+<tr>
+<td>浮动范围</td>
+<td>默认 ±20%，可调 ±10% / ±30%</td>
+</tr>
+<tr>
+<td>最小段长 / 最大段长</td>
+<td>避免极短或极长段落</td>
+</tr>
+<tr>
+<td>切分依据偏好</td>
+<td>“优先标点句号” / “优先长停顿” / “平衡”（默认）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>分段后编辑</strong>：分段结果以列表展示，每段可播放试听、查看 ASR 文本、手动拖拽边界微调、合并相邻段、拆分某段。支持“从第 N 段开始训练”的断点续练。</p>
+<p><strong>分段预听与难度预览</strong>：正式训练前可快速浏览所有分段波形与时长分布，对过长段落标记“待调整”，开始训练时优先提醒。</p>
+<h4 id="322-">3.2.2 逐段训练流程</h4>
+<p>每个分段遵循“听—记—译—录”循环：</p>
+<p><strong>播放控制</strong>：</p>
+<ul>
+<li>分段播放：当前段从头播放，支持暂停/继续。</li>
+<li>重复播放：同一段可重复听，次数不限。</li>
+<li>变速播放：0.75× / 1.0× / 1.25× / 1.5×，变速不变调。</li>
+<li>源语回放与译语回放分离控制。</li>
+</ul>
+<p><strong>录音</strong>：</p>
+<ul>
+<li>进入“翻译录制”状态自动开始录音，点击“完成本段”停止。</li>
+<li>录音前可设置倒计时（如 3 秒）。</li>
+<li>录音中显示实时波形与计时器。</li>
+</ul>
+<p><strong>数字笔记板（可选增强）</strong>：播放源语阶段提供手写/键入关键词的笔记板；复盘时笔记时间轴可与录音回放同步呈现，帮助还原“当时听到了什么、记了什么、译出了什么”。</p>
+<p><strong>多轮训练</strong>：同一素材支持“回炉”重练，系统保留每一轮录音，便于对比同一段落在不同轮次中的表现变化。</p>
+<h4 id="323-">3.2.3 复盘衔接的数据要求</h4>
+<p>每段训练记录必须包含 <code>segment_index</code>、<code>source_start</code>、<code>source_end</code>、<code>user_audio_start</code>、<code>user_audio_end</code>、<code>attempt_number</code>，以便复盘中精确跳转与对比。</p>
+<hr />
+<h3 id="33-">3.3 同声传译训练</h3>
+<h4 id="331-">3.3.1 带稿同声传译</h4>
+<p><strong>适用场景</strong>：用户拥有讲话稿或字幕文本，一边看稿一边同传输出。文本作用是减轻听辨负担、提供术语与专有名词锚点、帮助预判句法走向。</p>
+<p><strong>训练界面布局</strong>：</p>
+<ul>
+<li>中央主文本区，字号、行距可调。</li>
+<li>当前朗读中的句子/短语以高亮底色标识，已读部分淡化，未读部分正常显示。</li>
+<li>文本随音频进度滚动，滚动节奏跟随对齐时间戳，而非固定 WPM 匀速滚动。</li>
+<li>术语与专有名词（来自个人术语库或系统识别的数字、人名、机构名）以不同颜色/下划线标记。</li>
+<li>提供“隐藏文本”开关：训练中可随时切换纯听模式，自我检测是否过度依赖稿件。</li>
+</ul>
+<p><strong>丰富功能——文本遮挡训练</strong>：可设置“每句末尾几个词遮挡”或“随机遮挡 20% 的短语”，迫使在稿件支撑下仍保持听辨投入，逐步过渡到无稿同传。</p>
+<p><strong>丰富功能——段落/发言人分割</strong>：若稿件包含多段落或多发言人，训练界面按段落分段，复盘时按段落统计表现。</p>
+<h4 id="332-">3.3.2 无稿同声传译</h4>
+<p><strong>适用场景</strong>：仅有音频，模拟真实会议中无稿或无法预知讲稿的同传场景。</p>
+<p><strong>训练界面原则</strong>：极简、低干扰。无稿同传认知负荷极高，界面不应增加视觉负担。</p>
+<ul>
+<li>默认仅显示：播放/暂停、录音状态、计时器、可选 EVS 指示器。</li>
+<li><strong>EVS 指示器</strong>：轻量实现——提供自报告式 EVS 标记，用户可按快捷键标记“跟得太紧/太松”；也可在训练前设定目标 EVS（如滞后源语 2—3 秒），界面以计时器提示当前录音相对播放的粗略时差。EVS 是同传训练核心调控变量，从短到长的滞后控制有助于拓展记忆缓冲能力。</li>
+<li><strong>干扰音训练（可选）</strong>：可开启低音量背景噪声或竞争语音，模拟同传箱外干扰环境，默认关闭。</li>
+</ul>
+<p><strong>语速调节</strong>：源语音频支持 0.75×—1.25× 变速播放，帮助从较慢语速逐步适应真实语速。</p>
+<h4 id="333--evs-">3.3.3 影子练习与 EVS 专项（同传预备模块）</h4>
+<p>影子练习作为独立训练类型在素材选择后出现，而非隐藏在无稿同传内部。</p>
+<p><strong>训练参数</strong>：</p>
+<ul>
+<li>跟述语言：源语跟述 / 译语跟述</li>
+<li>跟述类型：音位跟述（几乎同步） / 片语跟述（滞后 2—3 秒或用户设定）</li>
+<li>目标 EVS：用户设定目标滞后秒数，训练中计时器显示当前大致滞后，复盘时对比目标与实际</li>
+</ul>
+<p><strong>复盘</strong>：双轨回放同上，额外显示 EVS 偏差曲线（实际滞后与目标的偏离随时间变化），帮助建立稳定的听说时差感知。</p>
+<h4 id="334-">3.3.4 同传训练录音策略</h4>
+<p>同传训练采用<strong>源语与译语双轨同步录制</strong>：源语音频轨与麦克风轨独立保存但共享同一时间基准。录制中若暂停源语播放，译语轨同步暂停，恢复时两轨同步继续，保证时间轴不漂移。该数据结构是复盘“原译对比”的基础。</p>
+<hr />
+<h3 id="34-">3.4 复盘工作台</h3>
+<p>复盘是将“录音机”升级为“训练工具”的核心模块。所有训练模式结束后进入统一复盘工作台，根据训练类型展示不同默认视图。</p>
+<h4 id="341-">3.4.1 双轨波形与同步回放</h4>
+<p>界面主体为上下两条对齐波形轨：上轨源语音频，下轨用户译语录音（交传按分段展示，同传整段展示）。两轨共享时间轴，播放头同步移动。</p>
+<p><strong>播放模式</strong>：</p>
+<ul>
+<li>源语单独播放</li>
+<li>译语单独播放</li>
+<li>源译混合播放</li>
+<li><strong>双耳分听</strong>（使用耳机时）：左耳源语、右耳译语，或反之，可切换。</li>
+</ul>
+<p>使用户在回听自己输出的同时即时对照源语信息，定位“哪里漏了、哪里偏了、哪里卡了”。</p>
+<h4 id="342-">3.4.2 时间锚点标记与问题分类</h4>
+<p>用户可在波形任意位置点击添加时间锚点标记，并选择问题类型：</p>
+<ul>
+<li><strong>忠实度类</strong>：漏译、误译、增译、数字/专有名词错误</li>
+<li><strong>流利度类</strong>：长时间停顿、填充词（嗯/呃）、自我修正、重复</li>
+<li><strong>表达类</strong>：语法错误、用词不当、语速失控</li>
+<li><strong>策略类</strong>：EVS 过短/过长、笔记未利用（交传）</li>
+</ul>
+<p>标记显示在波形轨上方，点击标记直接跳转。复盘时可按问题类型筛选，快速定位同类问题。</p>
+<p><strong>标记统计摘要</strong>：复盘页顶部显示本轮标记分布概览（如“漏译 3 处，长停顿 5 处，数字错误 1 处”），并与该用户同素材上一轮或近期平均水平对比。</p>
+<h4 id="343-ai-">3.4.3 自动评估线索（AI 辅助）</h4>
+<p>自动评估定位是<strong>提供可解释线索</strong>，而非替代自我判断。基于可解释 AI 的口译评估研究表明：神经翻译评估指标对忠实度有较强预测力，停顿相关特征对流利度有较强预测力。</p>
+<p>一期可输出：</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>自动线索</th>
+<th>呈现方式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>流利度</td>
+<td>停顿次数、平均停顿时长、发声时间比、语速（WPM/CPM）</td>
+<td>数值 + 波形上自动标注长停顿位置</td>
+</tr>
+<tr>
+<td>忠实度（若源语 ASR 可用）</td>
+<td>译语与源语 ASR 文本的语义相似度线索、数字/专有名词匹配情况</td>
+<td>以“高风险片段”列表呈现，而非单一分数</td>
+</tr>
+<tr>
+<td>覆盖率</td>
+<td>源语关键实体在译语中的出现情况</td>
+<td>实体列表 + 是否命中</td>
+</tr>
+</tbody>
+</table>
+<p><strong>关键约束</strong>：自动指标<strong>不给出“总分”</strong>，避免形成误导性权威感。界面措辞为“线索”“参考信号”，并明确说明这些指标无法替代自我判断。</p>
+<h4 id="344-">3.4.4 笔记回放（若启用）</h4>
+<p>若交传中使用了数字笔记板，复盘时可开启“笔记回放”：笔记书写轨迹按时间戳逐笔重现，并与源语播放同步。使用户审视“笔记哪些部分在翻译时真正被用到、哪些是无效记录”。</p>
+<h4 id="345-">3.4.5 复盘报告导出</h4>
+<p>用户可将本轮复盘导出为个人学习报告（PDF/图片/文本摘要），包含：素材信息、训练类型、波形截图、标记统计、自动线索摘要、个人备注。便于个人归档或作为学习记录留存。<strong>不设分享到公开社区功能</strong>。</p>
+<hr />
+<h3 id="35-">3.5 个人成长追踪</h3>
+<h4 id="351-">3.5.1 训练历史</h4>
+<ul>
+<li>按素材、训练类型、日期筛选训练记录。</li>
+<li>每条记录显示时长、问题标记数、自动线索摘要。</li>
+<li>支持对某条记录继续复盘、重练、删除。</li>
+</ul>
+<h4 id="352-">3.5.2 趋势与对比</h4>
+<ul>
+<li>同一素材多轮训练的流利度线索（平均停顿时长、语速）变化曲线。</li>
+<li>不同素材累计训练时长与标记问题类型分布。</li>
+<li><strong>回炉对比</strong>：选择同一素材两次训练记录，并排进入复盘工作台，双轨波形和标记可叠加对比。</li>
+</ul>
+<h4 id="353-">3.5.3 训练计划与目标（自学增强）</h4>
+<ul>
+<li>用户可设定个人训练目标：如“每周交传 3 次、同传 2 次”“本月完成 20 段交传复盘”。</li>
+<li>系统在个人看板展示完成进度与连续训练天数。</li>
+<li>支持为某素材设置“计划重练日期”，到期提醒。</li>
+<li>不设教师布置任务；所有计划由用户自行创建和调整。</li>
+</ul>
+<h4 id="354-">3.5.4 成就与激励（轻量）</h4>
+<ul>
+<li>连续训练天数、累计训练时长、完成复盘次数等个人成就徽章。</li>
+<li>仅本人可见，不做社交排行，避免外部比较干扰自学节奏。</li>
+</ul>
+<hr />
+<h3 id="36-">3.6 快捷键与训练效率</h3>
+<p>自学场景中操作摩擦直接影响训练连续性。建议提供：</p>
+<table>
+<thead>
+<tr>
+<th>快捷键</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Space</td>
+<td>播放/暂停</td>
+</tr>
+<tr>
+<td>R</td>
+<td>重播当前分段/从头播放</td>
+</tr>
+<tr>
+<td>M</td>
+<td>添加时间锚点标记</td>
+</tr>
+<tr>
+<td>1/2/3/4</td>
+<td>快速选择问题类型</td>
+</tr>
+<tr>
+<td>←/→</td>
+<td>前后跳转 5 秒</td>
+</tr>
+<tr>
+<td>S</td>
+<td>切换源语/译语/混合播放</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="4-">4. 非功能需求</h2>
+<h3 id="41-">4.1 音频与实时性</h3>
+<ul>
+<li>录音采样率不低于 16 kHz，单声道；源语音频播放推荐 44.1/48 kHz，录音轨可 16 kHz 控制存储。</li>
+<li>使用 Web Audio API + AudioWorklet 低延迟采集与实时波形/音量获取。</li>
+<li>播放与录音同步误差控制在 <strong>100 ms 以内</strong>；同传双轨录制 10 分钟连续训练时间漂移不超过 <strong>200 ms</strong>。</li>
+<li>波形前端渲染，长音频降采样分块加载，避免卡顿。</li>
+</ul>
+<h3 id="42--asr-">4.2 分段与 ASR 处理时延</h3>
+<ul>
+<li>智能分段为非实时预处理。5 分钟音频分段计算目标 <strong>30 秒内</strong>完成，长音频允许异步处理并通知。</li>
+<li>ASR 词级时间戳精度目标为“几个十分之一秒”级别，对句子边界重组足够；ASR 文本不保证 100% 准确，边界以“推荐”而非“强制”呈现，用户可手动修正。</li>
+</ul>
+<h3 id="43-">4.3 兼容性与可访问性</h3>
+<ul>
+<li>浏览器：Chrome / Edge / Firefox / Safari 最近两个大版本。</li>
+<li>桌面端优先保证录音与训练体验；移动端至少支持复盘回听与标记查看。</li>
+<li>键盘快捷键覆盖核心训练操作。</li>
+</ul>
+<h3 id="44-">4.4 数据、隐私与合规</h3>
+<ul>
+<li>单用户产品，所有素材、录音、复盘记录默认仅本人可见，无公开分享、无社交展示。</li>
+<li>提供“删除单条训练录音”“删除素材及关联记录”“删除账号及全部数据”入口，删除即时生效。</li>
+<li>支持数据导出（个人训练记录、复盘报告），便于用户迁移或归档。</li>
+<li>若面向欧盟用户需符合 GDPR 对语音数据的处理要求；面向国内场景遵循个人信息保护相关规定。注册和首次上传时以清晰语言告知数据用途。</li>
+<li>可选“纯本地模式”：素材与录音仅保存在浏览器本地存储/IndexedDB，不上传云端；用户需自行承担换设备丢失风险，产品需明确提示。</li>
+</ul>
+<hr />
+<h2 id="5-">5. 页面与交互流程</h2>
+<h3 id="51-">5.1 交替传译训练路径</h3>
+<pre><code class="language-text">素材选择/上传
+  → 分段参数设置（目标时长、浮动范围）
+  → 系统分段 → 分段列表预览与微调
+  → 逐段训练（播放→录音→下一段）
+  → 训练完成 → 进入复盘工作台
+  → 双轨回听 + 标记问题 + 查看自动线索
+  → 保存复盘记录 / 重练本段 / 导出报告
+</code></pre>
+<h3 id="52-">5.2 带稿同传训练路径</h3>
+<pre><code class="language-text">素材选择（音频 + 文本稿件）
+  → 文本-音频对齐（自动 + 手动校准）
+  → 训练界面配置（字号、是否隐藏文本、术语高亮、遮挡设置）
+  → 同传训练（源语播放 + 译语录制，文本同步高亮滚动）
+  → 结束 → 复盘工作台（双轨 + 文本视图联动）
+</code></pre>
+<h3 id="53-">5.3 无稿同传训练路径</h3>
+<pre><code class="language-text">素材选择
+  → 训练模式选择：标准无稿同传 / 影子练习
+  → 参数配置（语速、EVS目标、干扰音开关）
+  → 极简界面训练（源语播放 + 译语录制 + 可选EVS标记）
+  → 结束 → 复盘工作台（双轨 + EVS标记/偏差）
+</code></pre>
+<hr />
+<h2 id="6-">6. 功能优先级清单（单用户自学版）</h2>
+<table>
+<thead>
+<tr>
+<th>优先级</th>
+<th>功能</th>
+<th>所属模块</th>
+<th>理由</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>P0</strong></td>
+<td>智能分段边界置信度显示与手动微调</td>
+<td>交传</td>
+<td>基础需求“时长浮动”的落地保障</td>
+</tr>
+<tr>
+<td><strong>P0</strong></td>
+<td>双轨波形同步回放 + 时间锚点问题标记</td>
+<td>复盘</td>
+<td>复盘最小可用能力，解决“找不到问题位置”痛点</td>
+</tr>
+<tr>
+<td><strong>P0</strong></td>
+<td>带稿同传文本-音频对齐与高亮滚动</td>
+<td>同传</td>
+<td>带稿同传区别于“放音频看稿”的核心价值</td>
+</tr>
+<tr>
+<td><strong>P1</strong></td>
+<td>影子练习独立入口 + EVS 目标与偏差复盘</td>
+<td>同传</td>
+<td>同传自学标准预备环节，低成本提升训练完整性</td>
+</tr>
+<tr>
+<td><strong>P1</strong></td>
+<td>个人术语库导入/提取/高亮/闪卡</td>
+<td>准备与复盘</td>
+<td>术语是口译训练高频刚需，串联素材准备与带稿同传</td>
+</tr>
+<tr>
+<td><strong>P1</strong></td>
+<td>训练历史、回炉对比、个人趋势</td>
+<td>个人成长</td>
+<td>自学平台的核心留存能力</td>
+</tr>
+<tr>
+<td><strong>P1</strong></td>
+<td>训练计划与目标、轻量成就</td>
+<td>个人成长</td>
+<td>替代外部教师监督，帮助自学者维持节奏</td>
+</tr>
+<tr>
+<td><strong>P2</strong></td>
+<td>自动流利度/忠实度线索（可解释，非总分）</td>
+<td>复盘</td>
+<td>在双轨与标记之上提供“看什么”的引导</td>
+</tr>
+<tr>
+<td><strong>P2</strong></td>
+<td>笔记回放</td>
+<td>交传复盘</td>
+<td>对交传价值高，实现成本较高</td>
+</tr>
+<tr>
+<td><strong>P2</strong></td>
+<td>文本遮挡训练</td>
+<td>带稿同传</td>
+<td>帮助从带稿向无稿过渡的脚手架</td>
+</tr>
+<tr>
+<td><strong>P2</strong></td>
+<td>复盘报告导出</td>
+<td>复盘</td>
+<td>个人归档与学习记录留存</td>
+</tr>
+<tr>
+<td><strong>P3</strong></td>
+<td>干扰音训练、纯本地模式</td>
+<td>同传 / 系统</td>
+<td>增值功能，视用户反馈排期</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="7-">7. 技术方案要点</h2>
+<ul>
+<li><strong>录音与波形</strong>：Web Audio API + AudioWorklet 获取 PCM 与实时音量，前端绘制波形；录音编码 WAV/WebM 后存储。</li>
+<li><strong>ASR 与词级时间戳</strong>：Whisper 或同类模型启用词级时间戳；句子边界重组在应用层结合标点、停顿、句法信号完成，不依赖模型原生分段。</li>
+<li><strong>句子边界检测</strong>：ASR 文本经句子切分器与词级时间戳对齐，生成候选边界及时间位置；长停顿通过 VAD 或波形能量分析获取。</li>
+<li><strong>音频对齐（带稿同传）</strong>：ASR 文本与用户稿件模糊匹配，将稿件句子映射到音频时间区间；低置信度映射进入手动校准。</li>
+<li><strong>自动线索</strong>：忠实度线索可基于 ASR 文本语义相似度指标（BLEURT/CometKiwi 类方法）；流利度线索基于录音轨停顿检测与计时统计；均在复盘阶段离线计算，不占训练实时资源。</li>
+<li><strong>单用户数据模型</strong>：所有素材、录音、训练记录、术语库、标记均归属当前登录用户；无共享、无角色权限表。可选匿名本地模式不产生云端账号数据。</li>
+<li><strong>存储</strong>：源语音频与用户录音分离存储；训练记录以结构化文档保存分段索引、时间锚点和标记数据。</li>
+</ul>
+<hr />
+<h2 id="8-">8. 验收口径（关键项）</h2>
+<table>
+<thead>
+<tr>
+<th>验收项</th>
+<th>标准</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>交传智能分段</td>
+<td>用户设定时长 ± 浮动范围内，输出边界经人工判断为“句子/意群结束处”的比例不低于 80%（基于测试集）</td>
+</tr>
+<tr>
+<td>分段可编辑性</td>
+<td>每段可独立试听、拖拽边界、合并/拆分，操作响应流畅</td>
+</tr>
+<tr>
+<td>双轨复盘</td>
+<td>源语与译语波形视觉严格对齐，播放头同步误差 ≤ 100 ms</td>
+</tr>
+<tr>
+<td>带稿同传高亮</td>
+<td>当前句高亮与音频进度一致，文本滚动跟随时间戳而非固定匀速</td>
+</tr>
+<tr>
+<td>同传双轨录制</td>
+<td>连续 10 分钟训练后源语轨与译语轨时间漂移 ≤ 200 ms</td>
+</tr>
+<tr>
+<td>单用户数据隔离</td>
+<td>任意用户无法访问他人素材、录音、复盘记录；产品无公开素材库与社交入口</td>
+</tr>
+<tr>
+<td>数据可删除</td>
+<td>用户删除训练记录/素材/账号后，相关音频与结构化数据在合理时间内不可恢复</td>
+</tr>
+<tr>
+<td>无多角色入口</td>
+<td>产品界面不出现教师端、班级、任务布置、批阅、互评等入口</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>文档结束。</strong></p>
+<blockquote>
+<p>建议 v1.1 评审后补充：低保真交互线框、分段边界测试集与评估方案、自动线索指标阈值与展示文案规范、纯本地模式的技术可行性评估。</p>
+</blockquote>
+
+  </div>
+
+  
+  <nav class="post-nav">
+    
+    <div class="post-nav-card post-nav-card--empty">
+      <div class="post-nav-card__body">
+        <span class="post-nav-card__label meta-text">上一篇</span>
+        <span class="post-nav-card__empty-text">没有上一篇了~</span>
+      </div>
+    </div>
+    
+    
+    <a href="/post/2026-restart/" class="post-nav-card post-nav-card--next">
+      <div class="post-nav-card__body">
+        <span class="post-nav-card__label meta-text">下一篇</span>
+        <span class="post-nav-card__title">2026，重启人生</span>
+      </div>
+      
+      <div class="post-nav-card__img">
+        <img src="https://blog-1257076412.cos.ap-beijing.myqcloud.com/H-Scandinavia_seaside.jpg" alt="2026，重启人生" loading="lazy" />
+      </div>
+      
+      <span class="post-nav-card__arrow">&rarr;</span>
+    </a>
+    
+  </nav>
+
+  
+  
+
+
+</article>
+
+  </main>
+
+  <footer class="site-footer">
+  <div class="footer-inner">
+
+    
+    
+    <nav class="footer-nav" aria-label="页脚导航">
+      
+      <a class="footer-nav__link" href="/">首页</a>
+      
+      <a class="footer-nav__link" href="/post">博客</a>
+      
+      <a class="footer-nav__link" href="/memos">闪念</a>
+      
+      <a class="footer-nav__link" href="/archives">归档</a>
+      
+      <a class="footer-nav__link" href="/tags">标签</a>
+      
+      <a class="footer-nav__link" href="https://blog.evanhub.cn/interplab/">Interplab</a>
+      
+      <a class="footer-nav__link" href="/links">友链</a>
+      
+      <a class="footer-nav__link" href="/post/about">关于</a>
+      
+    </nav>
+    
+
+    
+    <div class="footer-social">
+      
+      
+      
+      <a class="footer-social__link" href="https://weibo.com/u/9138844902" target="_blank" rel="noopener noreferrer"
+        aria-label="微博">
+        <svg width="20" height="20" viewBox="0 0 16 16" fill="currentColor">
+          <path d="M10.878 1.093a4.23 4.23 0 0 1 4.031 1.305 4.22 4.22 0 0 1 .886 4.14v.001a.612.612 0 0 1-1.166-.377 3.01 3.01 0 0 0-3.495-3.873.611.611 0 1 1-.256-1.196M3.753 9.465c.548-1.11 1.972-1.74 3.233-1.411 1.304.338 1.971 1.568 1.437 2.764-.541 1.221-2.095 1.875-3.416 1.449-1.271-.411-1.812-1.67-1.254-2.802m2.658.567c.16.066.365-.009.458-.168.088-.16.03-.34-.129-.397-.156-.062-.353.013-.446.168-.09.154-.041.333.117.397m-1.607 1.314c.413.188.963.009 1.219-.4.252-.413.12-.883-.296-1.062-.41-.172-.94.005-1.194.402-.256.4-.135.874.271 1.06"/>
+          <path d="m12.014 7.238.005.001c.919.285 1.941.974 1.939 2.188 0 2.007-2.895 4.535-7.246 4.535C3.393 13.962 0 12.352 0 9.708c0-1.385.876-2.985 2.384-4.493C4.4 3.199 6.751 2.28 7.634 3.165c.39.392.427 1.065.177 1.87-.132.405.38.182.38.182 1.63-.682 3.051-.722 3.57.02.278.397.252.951-.004 1.594-.116.293.035.34.257.407m-10.4 3.101c.172 1.738 2.46 2.936 5.109 2.674 2.647-.26 4.656-1.883 4.482-3.623-.17-1.738-2.458-2.937-5.107-2.674-2.647.263-4.656 1.883-4.484 3.623m11.681-6.484a2.06 2.06 0 0 0-1.962-.634.526.526 0 1 0 .219 1.031 1.008 1.008 0 0 1 1.17 1.296.528.528 0 0 0 1.005.325 2.06 2.06 0 0 0-.432-2.018"/>
+        </svg>
+      </a>
+      
+      <a class="footer-social__link" href="/feed.xml" aria-label="RSS">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M6.18 15.64a2.18 2.18 0 110 4.36 2.18 2.18 0 010-4.36zM4 4.44A15.56 15.56 0 0119.56 20h-2.83A12.73 12.73 0 004 7.27V4.44zm0 5.66a9.9 9.9 0 019.9 9.9h-2.83A7.07 7.07 0 004 12.93V10.1z"/>
+        </svg>
+      </a>
+    </div>
+
+    
+    <div class="footer-copyright">
+      <p>&copy; 2026 Evan&#39;s Blog. All rights reserved.</p>
+    </div>
+
+    
+    
+
+    
+    <div class="footer-powered">
+      <span>Powered by <a href="https://gridea.pro" target="_blank" rel="noopener noreferrer">Gridea Pro</a></span>
+    </div>
+
+  </div>
+</footer>
+
+  
+  <div class="search-overlay" id="searchOverlay" style="display:none;">
+  <div class="search-modal">
+    <div class="search-header">
+      <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="11" cy="11" r="8"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+      <input type="text" class="search-input" id="searchInput" placeholder="搜索文章..." autocomplete="off" />
+      <span class="search-kbd">&#8984;K</span>
+      <button class="search-close" id="searchClose" type="button" aria-label="关闭搜索">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    <div class="search-results" id="searchResults"></div>
+  </div>
+</div>
+
+<script src="/scripts/search.js"></script>
+  
+
+  
+
+  
+  <style>/* 引入字体 */
+@import url('https://fonts.font.im/css2?family=Noto+Serif+SC:wght@400;500;600;700&family=Spectral:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+/* 标题、文章标题、侧边栏标题 */
+h1, h2, h3, h4, h5, h6, 
+.post-card__title, 
+.section-title,
+.sidebar__title,
+/* 👇 这里加入网站名称的可能类名 */
+.site-name-link, 
+.logo-text,
+.site-header .logo a,
+header a.title {
+    font-size: 24px; /* 扩大字号，数值可按需修改 */
+    font-family: 'Spectral', 'Noto Serif SC', serif !important;
+}</style>
+  
+
+  
+
+<script>console.log("\n%c ✦ Gridea Pro v1.3.0-beta.2 %c · Theme: flavor-theme v1.0.0 · https://gridea.pro %c\n","color:#fadfa3;background:#111111;padding:9px 14px;border-radius:4px 0 0 4px;font-weight:500;font-size:12px","color:#e05c00;background:#fff3ec;padding:9px 14px;border-radius:0 4px 4px 0;font-size:11px","")</script>
+</body>
+</html>

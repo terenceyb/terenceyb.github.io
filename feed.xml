@@ -6,8 +6,20 @@
     <description>Welcome to Evan Blog</description>
     <language>zh-cn</language>
     <generator>Gridea Pro</generator>
-    <lastBuildDate>Sun, 08 Nov 2026 22:14:06 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 08 Nov 2026 22:24:39 +0800</lastBuildDate>
     <atom:link href="https://blog.evanhub.cn/feed.xml" rel="self" type="application/rss+xml"></atom:link>
+    <item>
+      <title>Interplab-口译训练平台 PRD（v1.1）</title>
+      <link>https://blog.evanhub.cn/post/interplabprdv1.1/</link>
+      <guid isPermaLink="true">https://blog.evanhub.cn/post/interplabprdv1.1/</guid>
+      <pubDate>Sun, 08 Nov 2026 22:24:39 +0800</pubDate>
+      <description><![CDATA[<blockquote>
+<p><!-- raw HTML omitted -->让口译自学者把每一次练习，都变成可复盘、可对比、可改进的证据。<!-- raw HTML omitted --></p>
+<p><!-- raw HTML omitted -->InterpLab 是一款个人口译自学训练与复盘工具，支持交替传译智能分段训练、带稿与无稿同声传译、影子练习。以双轨波形对齐回&hellip;</p>
+</blockquote>
+]]></description>
+      <enclosure url="https://blog-1257076412.cos.ap-beijing.myqcloud.com/InterpLab%E4%BA%A7%E5%93%81%E7%BD%91%E7%AB%99%E5%B1%95%E7%A4%BA%E5%9B%BE%E7%94%9F%E6%88%90.png" length="0" type="image/png"></enclosure>
+    </item>
     <item>
       <title>2026，重启人生</title>
       <link>https://blog.evanhub.cn/post/2026-restart/</link>
@@ -18,7 +30,7 @@
 </blockquote>
 ]]></description>
       <category>大事记</category>
-      <enclosure url="https://blog-1257076412.cos.ap-beijing.myqcloud.com/logo.jpg" length="0" type="image/jpeg"></enclosure>
+      <enclosure url="https://blog-1257076412.cos.ap-beijing.myqcloud.com/H-Scandinavia_seaside.jpg" length="0" type="image/jpeg"></enclosure>
     </item>
   </channel>
 </rss>
