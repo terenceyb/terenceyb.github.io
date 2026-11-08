@@ -6,7 +6,18 @@
     <description>Welcome to Evan Blog</description>
     <language>zh-cn</language>
     <generator>Gridea Pro</generator>
-    <lastBuildDate>Sun, 08 Nov 2026 12:47:59 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 08 Nov 2026 14:28:31 +0800</lastBuildDate>
     <atom:link href="https://blog.evanhub.cn/feed.xml" rel="self" type="application/rss+xml"></atom:link>
+    <item>
+      <title>2026，重启人生</title>
+      <link>https://blog.evanhub.cn/post/2026-restart/</link>
+      <guid isPermaLink="true">https://blog.evanhub.cn/post/2026-restart/</guid>
+      <pubDate>Sun, 08 Nov 2026 22:29:00 +0800</pubDate>
+      <description><![CDATA[<blockquote>
+<p>和自我的一些对话。</p>
+</blockquote>
+]]></description>
+      <category>大事记</category>
+    </item>
   </channel>
 </rss>

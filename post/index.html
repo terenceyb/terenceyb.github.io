@@ -30,7 +30,7 @@
   (function () {
     try {
       var saved = localStorage.getItem('flavor-theme');
-      var theme = saved || 'dark';
+      var theme = saved || 'light';
       if (theme === 'light') {
         document.documentElement.classList.add('theme-light');
       }
@@ -196,8 +196,25 @@
   </div>
 
   
-  <div class="empty-state">
-    <p class="empty-state__text">暂无文章</p>
+  <div class="post-list">
+    
+    <article class="post-card post-card--list">
+  <div class="post-card__body">
+    <a href="/post/2026-restart/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">2026，重启人生</h3>
+    </a>
+    <a href="/post/2026-restart/" class="post-card__excerpt clamp-2">
+      和自我的一些对话。
+    </a>
+    <div class="post-card__meta meta-text">
+      2026-11-08
+      <span class="badge badge--top">置顶</span>
+    </div>
+  </div>
+  
+</article>
+
+    
   </div>
   
 
