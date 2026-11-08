@@ -76,7 +76,7 @@
       <div class="top-bar__left">
         
         <a href="https://blog.evanhub.cn" class="site-avatar-link" aria-label="返回首页">
-          <img class="site-avatar" src="/images/theme/IMG_20261108_112800.jpg" alt="Evan&#39;s Blog" />
+          <img class="site-avatar" src="https://blog-1257076412.cos.ap-beijing.myqcloud.com/logo.jpg" alt="Evan&#39;s Blog" />
         </a>
         
         <a href="https://blog.evanhub.cn" class="site-name-link">Evan&#39;s Blog</a>
@@ -215,6 +215,10 @@
     </div>
   </div>
   
+  <a href="/post/2026-restart/" class="post-card__thumb-link">
+    <img class="post-card__thumb" src="https://blog-1257076412.cos.ap-beijing.myqcloud.com/logo.jpg" alt="2026，重启人生" loading="lazy" />
+  </a>
+  
 </article>
 
     
@@ -315,14 +319,20 @@
   
 
   
-  <style>/* 引入 Spectral 和 Noto Serif SC 字体 */
+  <style>/* 引入字体 */
 @import url('https://fonts.font.im/css2?family=Noto+Serif+SC:wght@400;500;600;700&family=Spectral:ital,wght@0,400;0,600;0,700;1,400&display=swap');
 
-/* 将标题字体替换为 Spectral + 思源宋体 */
+/* 标题、文章标题、侧边栏标题 */
 h1, h2, h3, h4, h5, h6, 
 .post-card__title, 
 .section-title,
-.sidebar__title {
+.sidebar__title,
+/* 👇 这里加入网站名称的可能类名 */
+.site-name-link, 
+.logo-text,
+.site-header .logo a,
+header a.title {
+    font-size: 24px; /* 扩大字号，数值可按需修改 */
     font-family: 'Spectral', 'Noto Serif SC', serif !important;
 }</style>
   
