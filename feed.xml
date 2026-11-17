@@ -6,7 +6,7 @@
     <description>Welcome to Evan Blog</description>
     <language>zh-cn</language>
     <generator>Gridea Pro</generator>
-    <lastBuildDate>Sun, 08 Nov 2026 22:43:21 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 17 Nov 2026 21:23:30 +0800</lastBuildDate>
     <atom:link href="https://blog.evanhub.cn/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <item>
       <title>Interplab-口译训练平台 PRD（v1.1）</title>
@@ -19,13 +19,13 @@
 </blockquote>
 ]]></description>
       <category>Vibe Coding</category>
-      <enclosure url="https://blog-1257076412.cos.ap-beijing.myqcloud.com/InterpLab%E4%BA%A7%E5%93%81%E7%BD%91%E7%AB%99%E5%B1%95%E7%A4%BA%E5%9B%BE%E7%94%9F%E6%88%90.png" length="0" type="image/png"></enclosure>
+      <enclosure url="https://blog.evanhub.cn/post-images/interplabprdv1.1.webp" length="0" type="image/webp"></enclosure>
     </item>
     <item>
       <title>存知 · 本地人脉管理平台用户文档（V1.1）</title>
       <link>https://blog.evanhub.cn/post/cunzhiapp/</link>
       <guid isPermaLink="true">https://blog.evanhub.cn/post/cunzhiapp/</guid>
-      <pubDate>Tue, 17 Nov 2026 14:15:52 +0000</pubDate>
+      <pubDate>Tue, 17 Nov 2026 14:15:52 +0800</pubDate>
       <description><![CDATA[<h1 id="--">存知 · 用户使用手册</h1>
 <blockquote>
 <p>适用版本：Beta V1.0（浏览器版）<br />
@@ -52,7 +52,7 @@
 </blockquote>
 ]]></description>
       <category>大事记</category>
-      <enclosure url="https://blog-1257076412.cos.ap-beijing.myqcloud.com/H-Scandinavia_seaside.jpg" length="0" type="image/jpeg"></enclosure>
+      <enclosure url="https://blog.evanhub.cn/post-images/2026-restart.webp" length="0" type="image/webp"></enclosure>
     </item>
   </channel>
 </rss>
