@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="/styles/main.min.css">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css">
+
+
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+
+
+<style>:root { --heatmap-color: #39d353; }</style>
+
+
+
+<style>
+  .theme-toggle-sun  { display: flex; }
+  .theme-toggle-moon { display: none; }
+  :root.theme-light .theme-toggle-sun  { display: none; }
+  :root.theme-light .theme-toggle-moon { display: flex; }
+</style>
+
+
+<script>
+  (function () {
+    try {
+      var saved = localStorage.getItem('flavor-theme');
+      var theme = saved || 'light';
+      if (theme === 'light') {
+        document.documentElement.classList.add('theme-light');
+      }
+    } catch (e) { }
+  })();
+</script>
+  <meta name="generator" content="Gridea Pro 1.3.0-beta.2">
+  <title>存知 · 本地人脉管理平台用户文档（V1.1） | Evan&#39;s Blog</title>
+  
+<meta property="og:title" content="存知 · 本地人脉管理平台用户文档（V1.1）" />
+<meta property="og:type" content="article" />
+
+<meta property="og:image" content="/post-images/cunzhiapp.webp" />
+
+
+<meta name="description" content="存知 · 用户使用手册 适用版本：Beta V1.0（浏览器版） 适用平台：桌面端（≥1200px）、平板（768–1199px）、手机（&amp;lt;768px） 在线地址：https://blog.evanhub.cn/cunzhi/ 目录 一、认识存知 [二、快速&amp;hellip;">
+<link rel="canonical" href="https://blog.evanhub.cn/post/cunzhiapp/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"存知 · 本地人脉管理平台用户文档（V1.1）","url":"https://blog.evanhub.cn/post/cunzhiapp/","description":"存知 · 用户使用手册 适用版本：Beta V1.0（浏览器版） 适用平台：桌面端（≥1200px）、平板（768–1199px）、手机（\u0026lt;768px） 在线地址：https://blog.evanhub.cn/cunzhi/ 目录 一、认识存知 [二、快速\u0026hellip;","image":"/post-images/cunzhiapp.webp","datePublished":"2026-11-17T14:15:52Z","dateModified":"2026-11-17T14:15:52Z","author":{"@type":"Person","name":"Evan's Blog"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"Evan's Blog"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://blog.evanhub.cn","name":"Evan's Blog","position":1},{"@type":"ListItem","item":"https://blog.evanhub.cn/post/cunzhiapp/","name":"存知 · 本地人脉管理平台用户文档（V1.1）","position":2}]}</script>
+<meta property="og:title" content="存知 · 本地人脉管理平台用户文档（V1.1）">
+<meta property="og:description" content="存知 · 用户使用手册 适用版本：Beta V1.0（浏览器版） 适用平台：桌面端（≥1200px）、平板（768–1199px）、手机（&amp;lt;768px） 在线地址：https://blog.evanhub.cn/cunzhi/ 目录 一、认识存知 [二、快速&amp;hellip;">
+<meta property="og:url" content="https://blog.evanhub.cn/post/cunzhiapp/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Evan's Blog">
+<meta property="og:image" content="/post-images/cunzhiapp.webp">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://blog.evanhub.cn/post/cunzhiapp/">
+<meta name="twitter:title" content="存知 · 本地人脉管理平台用户文档（V1.1）">
+<meta name="twitter:description" content="存知 · 用户使用手册 适用版本：Beta V1.0（浏览器版） 适用平台：桌面端（≥1200px）、平板（768–1199px）、手机（&amp;lt;768px） 在线地址：https://blog.evanhub.cn/cunzhi/ 目录 一、认识存知 [二、快速&amp;hellip;">
+<meta name="twitter:image" content="/post-images/cunzhiapp.webp">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#ffffff">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Evan's Blog">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/icons/icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/images/icons/icon-192x192.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/images/icons/icon-192x192.png">
+<script>if('serviceWorker' in navigator){navigator.serviceWorker.register('/sw.js')}</script>
+</head>
+<body class="flavor-theme">
+
+  <header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <div class="top-bar">
+
+      
+      <div class="top-bar__left">
+        
+        <a href="https://blog.evanhub.cn" class="site-avatar-link" aria-label="返回首页">
+          <img class="site-avatar" src="https://blog-1257076412.cos.ap-beijing.myqcloud.com/logo.jpg" alt="Evan&#39;s Blog" />
+        </a>
+        
+        <a href="https://blog.evanhub.cn" class="site-name-link">Evan&#39;s Blog</a>
+      </div>
+
+      
+      <nav class="top-bar__nav" id="sectionBar">
+        
+        
+        <a class="nav-item" href="/">首页</a>
+        
+        <a class="nav-item" href="/post">博客</a>
+        
+        <a class="nav-item" href="/memos">闪念</a>
+        
+        <a class="nav-item" href="/archives">归档</a>
+        
+        <a class="nav-item" href="/tags">标签</a>
+        
+        <a class="nav-item" href="https://blog.evanhub.cn/interplab/">Interplab</a>
+        
+        <a class="nav-item" href="/links">友链</a>
+        
+        <a class="nav-item" href="/post/about">关于</a>
+        
+        
+      </nav>
+
+      
+      <div class="top-bar__right">
+        <button class="btn-icon btn-search search-btn" id="btnSearch" type="button" aria-label="搜索">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+        <button class="btn-icon theme-toggle theme-toggle-sun" id="themeToggleSun" type="button"
+          aria-label="切换到浅色模式">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 1C12.5523 1 13 1.44772 13 2V4C13 4.55228 12.5523 5 12 5C11.4477 5 11 4.55228 11 4V2C11 1.44772 11.4477 1 12 1Z"></path>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M7 12C7 9.23858 9.23858 7 12 7C14.7614 7 17 9.23858 17 12C17 14.7614 14.7614 17 12 17C9.23858 17 7 14.7614 7 12ZM12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9Z"></path>
+            <path d="M13 20C13 19.4477 12.5523 19 12 19C11.4477 19 11 19.4477 11 20V22C11 22.5523 11.4477 23 12 23C12.5523 23 13 22.5523 13 22V20Z"></path>
+            <path d="M4.22282 4.22289C4.61335 3.83236 5.24651 3.83236 5.63704 4.22289L7.04704 5.63289C7.43756 6.02341 7.43756 6.65658 7.04704 7.0471C6.65651 7.43762 6.02335 7.43762 5.63283 7.0471L4.22282 5.6371C3.8323 5.24658 3.8323 4.61341 4.22282 4.22289Z"></path>
+            <path d="M18.367 16.9529C17.9765 16.5623 17.3433 16.5623 16.9528 16.9529C16.5623 17.3434 16.5623 17.9766 16.9528 18.3671L18.3628 19.7771C18.7533 20.1676 19.3865 20.1676 19.777 19.7771C20.1675 19.3866 20.1675 18.7534 19.777 18.3629L18.367 16.9529Z"></path>
+            <path d="M1 12C1 11.4477 1.44772 11 2 11H4C4.55228 11 5 11.4477 5 12C5 12.5523 4.55228 13 4 13H2C1.44772 13 1 12.5523 1 12Z"></path>
+            <path d="M20 11C19.4477 11 19 11.4477 19 12C19 12.5523 19.4477 13 20 13H22C22.5523 13 23 12.5523 23 12C23 11.4477 22.5523 11 22 11H20Z"></path>
+            <path d="M7.04704 16.9529C7.43756 17.3434 7.43756 17.9766 7.04704 18.3671L5.63704 19.7771C5.24651 20.1676 4.61335 20.1676 4.22282 19.7771C3.8323 19.3866 3.8323 18.7534 4.22283 18.3629L5.63283 16.9529C6.02335 16.5623 6.65651 16.5623 7.04704 16.9529Z"></path>
+            <path d="M19.777 5.6371C20.1675 5.24657 20.1675 4.61341 19.777 4.22289C19.3865 3.83236 18.7533 3.83236 18.3628 4.22289L16.9528 5.63289C16.5623 6.02341 16.5623 6.65658 16.9528 7.0471C17.3433 7.43762 17.9765 7.43762 18.367 7.0471L19.777 5.6371Z"></path>
+          </svg>
+        </button>
+        <button class="btn-icon theme-toggle theme-toggle-moon" id="themeToggleMoon" type="button"
+          aria-label="切换到深色模式">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C10.0222 2 8.08879 2.58649 6.4443 3.6853C4.79981 4.78412 3.51809 6.3459 2.76121 8.17317C2.00433 10.0004 1.8063 12.0111 2.19215 13.9509C2.578 15.8907 3.53041 17.6725 4.92894 19.0711C6.32746 20.4696 8.10929 21.422 10.0491 21.8079C11.9889 22.1937 13.9996 21.9957 15.8268 21.2388C17.6541 20.4819 19.2159 19.2002 20.3147 17.5557C21.4135 15.9112 22 13.9778 22 12C22 11.5955 21.7564 11.2309 21.3827 11.0761C21.009 10.9213 20.5789 11.0069 20.2929 11.2929C19.287 12.2988 17.9226 12.864 16.5 12.864C15.0774 12.864 13.713 12.2988 12.7071 11.2929C11.7012 10.287 11.136 8.92261 11.136 7.5C11.136 6.07739 11.7012 4.71304 12.7071 3.70711C12.9931 3.42111 13.0787 2.99099 12.9239 2.61732C12.7691 2.24364 12.4045 2 12 2ZM7.55544 5.34824C8.27036 4.87055 9.05353 4.51389 9.87357 4.28778C9.39271 5.27979 9.13604 6.37666 9.13604 7.5C9.13604 9.45304 9.91189 11.3261 11.2929 12.7071C12.6739 14.0881 14.547 14.864 16.5 14.864C17.6233 14.864 18.7202 14.6073 19.7122 14.1264C19.4861 14.9465 19.1295 15.7296 18.6518 16.4446C17.7727 17.7602 16.5233 18.7855 15.0615 19.391C13.5997 19.9965 11.9911 20.155 10.4393 19.8463C8.88743 19.5376 7.46197 18.7757 6.34315 17.6569C5.21447 16.538 4.4624 15.1126 4.15372 13.5607C3.84504 12.0089 4.00347 10.4003 4.60897 8.93853C5.21447 7.47672 6.23985 6.22729 7.55544 5.34824Z"></path>
+            <path d="M19 2C19.5523 2 20 2.44772 20 3V4H21C21.5523 4 22 4.44772 22 5C22 5.55228 21.5523 6 21 6H20V7C20 7.55228 19.5523 8 19 8C18.4477 8 18 7.55228 18 7V6H17C16.4477 6 16 5.55228 16 5C16 4.44772 16.4477 4 17 4H18V3C18 2.44772 18.4477 2 19 2Z"></path>
+          </svg>
+        </button>
+        <button class="btn-icon btn-nav-toggle mobile-only" id="btnNavToggle" type="button" aria-label="切换导航">
+          <div class="hamburger" id="hamburger">
+            <span class="hamburger__line hamburger__line--top"></span>
+            <span class="hamburger__line hamburger__line--bottom"></span>
+          </div>
+        </button>
+      </div>
+
+    </div>
+  </div>
+</header>
+
+
+<div class="header-spacer"></div>
+
+<script>
+(function(){
+  var btn = document.getElementById('btnNavToggle');
+  var nav = document.getElementById('sectionBar');
+  var hamburger = document.getElementById('hamburger');
+  if (btn && nav) {
+    btn.addEventListener('click', function(){
+      nav.classList.toggle('top-bar__nav--open');
+      if (hamburger) hamburger.classList.toggle('is-active');
+    });
+    nav.querySelectorAll('.nav-item').forEach(function(item){
+      item.addEventListener('click', function(){
+        nav.classList.remove('top-bar__nav--open');
+        if (hamburger) hamburger.classList.remove('is-active');
+      });
+    });
+  }
+
+  var root = document.documentElement;
+  var applyTheme = function(theme, persist){
+    if (theme === 'light') {
+      root.classList.add('theme-light');
+    } else {
+      root.classList.remove('theme-light');
+    }
+    if (persist) {
+      try { localStorage.setItem('flavor-theme', theme); } catch (e) {}
+    }
+  };
+  document.querySelectorAll('.theme-toggle').forEach(function(el){
+    el.addEventListener('click', function(){
+      applyTheme(root.classList.contains('theme-light') ? 'dark' : 'light', true);
+    });
+  });
+})();
+</script>
+
+  <main class="site-main" role="main">
+    
+<article class="article-container">
+  <header class="article-header">
+    <h1 class="article-title">存知 · 本地人脉管理平台用户文档（V1.1）</h1>
+    <div class="article-meta">
+      
+      
+      <a href="/category/default/" class="article-meta__category">默认分类</a>
+      
+      
+      <span class="article-meta__sep">·</span>
+      
+      <span class="article-meta__item">2026-11-17</span>
+      
+      <span class="article-meta__sep">·</span>
+      <span class="article-meta__item">15 分钟阅读</span>
+      
+    </div>
+    
+    <div class="article-header__tags">
+      
+      <a href="/tag/vibe-coding/" class="tag-pill tag-pill--sm">Vibe Coding</a>
+      
+    </div>
+    
+  </header>
+
+  
+  <div class="article-feature">
+    <img src="/post-images/cunzhiapp.webp" alt="存知 · 本地人脉管理平台用户文档（V1.1）" />
+  </div>
+  
+
+  <div class="article-content">
+    <h1 id="--">存知 · 用户使用手册</h1>
+<blockquote>
+<p>适用版本：Beta V1.0（浏览器版）<br />
+适用平台：桌面端（≥1200px）、平板（768–1199px）、手机（&lt;768px）<br />
+在线地址：<a href="https://blog.evanhub.cn/cunzhi/">https://blog.evanhub.cn/cunzhi/</a></p>
+</blockquote>
+<hr />
+<h2 id="heading">目录</h2>
+<ul>
+<li><a href="#%E4%B8%80%E8%AE%A4%E8%AF%86%E5%AD%98%E7%9F%A5">一、认识存知</a></li>
+<li><a href="#%E4%BA%8C%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B">二、快速开始</a></li>
+<li><a href="#%E4%B8%89%E7%95%8C%E9%9D%A2%E6%80%BB%E8%A7%88">三、界面总览</a></li>
+<li><a href="#%E5%9B%9B%E5%B7%A5%E4%BD%9C%E5%8F%B0%E9%A6%96%E9%A1%B5">四、工作台（首页）</a></li>
+<li><a href="#%E4%BA%94%E4%BA%BA%E8%84%89%E7%AE%A1%E7%90%86">五、人脉管理</a></li>
+<li><a href="#%E5%85%AD%E4%BA%92%E5%8A%A8%E9%80%9F%E8%AE%B0%E4%B8%8E%E5%BE%85%E5%8A%9E">六、互动、速记与待办</a></li>
+<li><a href="#%E4%B8%83%E5%85%B3%E7%B3%BB%E7%BD%91%E7%BB%9C">七、关系网络</a></li>
+<li><a href="#%E5%85%AB%E6%90%9C%E7%B4%A2%E4%B8%8E%E6%99%BA%E8%83%BD%E8%A7%86%E5%9B%BE">八、搜索与智能视图</a></li>
+<li><a href="#%E4%B9%9D%E6%88%91%E7%9A%84%E5%90%8D%E7%89%87">九、我的名片</a></li>
+<li><a href="#%E5%8D%81%E8%AE%BE%E7%BD%AE">十、设置</a></li>
+<li><a href="#%E5%8D%81%E4%B8%80%E6%95%B0%E6%8D%AE%E5%AE%89%E5%85%A8%E4%B8%8E%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98">十一、数据安全与常见问题</a></li>
+</ul>
+<hr />
+<h2 id="heading-1">一、认识存知</h2>
+<p><strong>存知</strong>是一款「本地优先」的人脉工作台：把见过的人连成一张可检索、可回想的网，让每一次联系都有来处，也记得那些重要的日子。</p>
+<p>它的三条基本主张：</p>
+<ul>
+<li><strong>数据是你自己的文件</strong>：所有数据写在你选中的 <code>.czdb</code> 数据包里，可随时拷走、备份，不上传服务器、不用注册账号。</li>
+<li><strong>本地优先</strong>：没有后端依赖，换设备或清缓存都不怕丢（前提是把数据包落到本地文件夹）。</li>
+<li><strong>关系可回看</strong>：走动提醒、互动时间线、关系网络三套视图，帮你把「认识」变成「记得」。</li>
+</ul>
+<h3 id="heading-2">核心概念</h3>
+<table>
+<thead>
+<tr>
+<th>概念</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>数据包（.czdb）</strong></td>
+<td>存知的全部数据容器，含人脉、待办、互动、纪念日、设置。可加密，可导出快照。</td>
+</tr>
+<tr>
+<td><strong>人脉</strong></td>
+<td>一个人脉记录，由若干字段（姓名、公司、电话……）＋关系备忘＋互动时间线组成。</td>
+</tr>
+<tr>
+<td><strong>互动</strong></td>
+<td>一次联系的记录（电话、见面、微信、礼物等），挂在某个人脉下，也可由速记快速生成。</td>
+</tr>
+<tr>
+<td><strong>走动提醒</strong></td>
+<td>按联系频率算出「久未联系」的人，提示你该打个招呼。</td>
+</tr>
+<tr>
+<td><strong>智能视图</strong></td>
+<td>用筛选条件保存下来的人群分组，可用于筛选人脉，也可参与走动提醒。</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="heading-3">二、快速开始</h2>
+<p>首次打开会看到启动页，中间是诗句与三行可点的词胶囊，下方是三个入口。从上到下依次为：</p>
+<h3 id="21-">2.1 三个入口</h3>
+<table>
+<thead>
+<tr>
+<th>入口</th>
+<th>作用</th>
+<th>适合谁</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>先看看演示数据</strong></td>
+<td>载入 14 位示例人脉与完整关系网，进入体验态，可放心点遍所有功能。</td>
+<td>第一次使用、想先逛一圈</td>
+</tr>
+<tr>
+<td><strong>从零开始</strong></td>
+<td>进入空白工作台，不预置任何业务数据。首次会弹出挂载引导。</td>
+<td>确定要录入自己的数据</td>
+</tr>
+<tr>
+<td><strong>打开本地数据包</strong></td>
+<td>选择一个已有的 <code>.czdb</code> 文件加载；若文件加密，会转入口令解锁。</td>
+<td>换设备继续用、恢复备份</td>
+</tr>
+</tbody>
+</table>
+<h3 id="22-">2.2 给数据安一个固定的家</h3>
+<p>选择「从零开始」后首次会弹出挂载引导，标题为<strong>「把数据存到你的文件夹」</strong>，引导语「给数据安一个固定的家」。两个选项：</p>
+<ul>
+<li><strong>选择本地文件夹</strong>：调用系统的保存窗口，默认文件名「我的存知数据包.czdb」。选定后每次改动都会自动写回这个文件，换设备、清缓存都不怕丢。</li>
+<li><strong>暂不，用浏览器缓存</strong>：数据仅存在浏览器本地缓存，界面会明确提示<strong>有数据丢失风险</strong>。之后仍可在「设置 → 数据包管理」里补做挂载。</li>
+</ul>
+<blockquote>
+<p>提示：不支持文件直接写入的浏览器会以「下载 / 导出覆盖」方式保存，功能不受影响，只是每次保存需手动确认下载。</p>
+</blockquote>
+<h3 id="23-">2.3 结束体验，正式使用</h3>
+<p>在演示数据体验态下，<strong>每个页面的顶栏</strong>都会显示一个醒目的「结束体验，正式使用」按钮（位于「文件保存状态」左侧）。点击后二次确认：</p>
+<ul>
+<li>确认框标题「结束体验，正式使用？」，说明会清空全部示例人脉、待办、互动与纪念日；</li>
+<li>按钮「清空示例，正式开始」／「再体验一会」；</li>
+<li>点「清空示例，正式开始」后回到空白工作台，并弹出一次与「从零开始」相同的挂载引导。</li>
+</ul>
+<blockquote>
+<p>「载入示例数据」支持撤销回退；「结束体验清空」不可撤销，请在确认前确认不再需要示例内容。</p>
+</blockquote>
+<hr />
+<h2 id="heading-4">三、界面总览</h2>
+<h3 id="31-">3.1 桌面端</h3>
+<table>
+<thead>
+<tr>
+<th>区域</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>左侧栏</strong></td>
+<td>顶部为「存知」Logo（点「回首页」）与「折叠侧栏」按钮；导航项：<strong>首页、人脉、互动记录</strong>；「智能视图」分组（你保存的视图）；「系统」分组下的<strong>设置</strong>；底部为个人名片入口。</td>
+</tr>
+<tr>
+<td><strong>顶栏</strong></td>
+<td>左侧为保存状态胶囊（体验态时其左侧有「结束体验，正式使用」按钮）；右侧三个图标按钮：<strong>全局搜索、速记、新建人脉</strong>。</td>
+</tr>
+<tr>
+<td><strong>主区</strong></td>
+<td>当前页面内容；人脉详情页左侧边缘可拖动调整面板宽度。</td>
+</tr>
+</tbody>
+</table>
+<p>折叠侧栏后只显示图标，鼠标悬停出提示；再点展开按钮恢复。</p>
+<h3 id="32-">3.2 移动端</h3>
+<table>
+<thead>
+<tr>
+<th>区域</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>顶栏</strong></td>
+<td>显示当前页标题（首页为「存知」Logo），右侧为搜索 / 速记 / 新建等操作图标。</td>
+</tr>
+<tr>
+<td><strong>底部导航</strong></td>
+<td>四个标签：<strong>首页、人脉、互动记录、设置</strong>。</td>
+</tr>
+<tr>
+<td><strong>右下角圆钮</strong></td>
+<td>展开六格快捷操作：<strong>速记、新建人脉、新建待办、记录互动、导入数据、全局搜索</strong>。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="33-">3.3 快捷键（桌面端）</h3>
+<table>
+<thead>
+<tr>
+<th>快捷键</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Ctrl / Cmd + K</code></td>
+<td>打开全局搜索</td>
+</tr>
+<tr>
+<td><code>Ctrl / Cmd + Shift + N</code></td>
+<td>打开速记</td>
+</tr>
+<tr>
+<td><code>Ctrl / Cmd + N</code></td>
+<td>新建人脉</td>
+</tr>
+<tr>
+<td><code>Ctrl / Cmd + Z</code></td>
+<td>撤销（非输入状态时）</td>
+</tr>
+<tr>
+<td><code>Esc</code></td>
+<td>关闭联系人详情 / 弹窗</td>
+</tr>
+<tr>
+<td><code>↑</code> <code>↓</code> <code>Enter</code></td>
+<td>在全局搜索里切换结果并打开</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>系统开启「减少动态效果」后，所有动画自动关闭，功能不受影响。</p>
+</blockquote>
+<hr />
+<h2 id="heading-5">四、工作台（首页）</h2>
+<p>首页顶部按当前时段问候（夜深了 / 早上好 / 中午好 / 下午好 / 晚上好），并给一句数据概览；右上角「恢复默认布局」可把卡片位置与折叠状态复原。</p>
+<p>首页有三张可拖动、可折叠的卡片，顺序可在「设置 → 外观 → 首页卡片顺序」调整（手机端）：</p>
+<h3 id="41-">4.1 走动提醒</h3>
+<ul>
+<li>列出该联系的人：头像、姓名、分组、上次互动时间、建议、逾期天数。</li>
+<li>操作：<strong>已联系</strong>（记一次联系并重置计时）、<strong>记录互动</strong>（填写详情）、<strong>多选</strong>（Shift 连选后<strong>批量记录互动</strong>）。</li>
+<li>没有待提醒的人时，显示「随机翻一张名片」。</li>
+</ul>
+<h3 id="42-">4.2 待办事项</h3>
+<ul>
+<li>按<strong>逾期 / 今天 / 本周</strong>分组，显示标题、关联人、截止日、逾期天数；重要待办带「●」标记。</li>
+<li>勾选完成时，若有关联人，可选「完成并记录互动」或「仅完成」。</li>
+<li>按钮：<strong>待办中心</strong>（进入完整列表）、<strong>新建待办</strong>。</li>
+</ul>
+<h3 id="43-">4.3 纪念日</h3>
+<ul>
+<li>展示未来 7 天内的生日 / 合作周年，标注「今天·当天」或「X 天后」，当天高亮。</li>
+<li>按钮：<strong>从生日字段导入</strong>（把人脉里填了生日的人一键创建为纪念日）。</li>
+</ul>
+<blockquote>
+<p>小技巧：拖动卡片标题可调整位置，撞到的卡片自动让位；折叠状态与顺序保存在本机。</p>
+</blockquote>
+<hr />
+<h2 id="heading-6">五、人脉管理</h2>
+<h3 id="51-">5.1 新建与编辑人脉</h3>
+<p>点击「新建人脉」（顶栏图标或人脉页按钮），弹窗标题「新建人脉」；编辑时标题为「编辑「姓名」」。</p>
+<ul>
+<li><strong>头像</strong>：点击上传，支持 JPG / PNG / WebP，自动压缩成正方形。</li>
+<li><strong>基础信息</strong>：姓名等核心字段。</li>
+<li><strong>联系方式</strong>：电话、邮箱（工作 / 个人 / 其他）等多通道字段。</li>
+<li><strong>自定义字段</strong>：可在「设置 → 字段管理」里增删，这里会同步出现。</li>
+<li><strong>关系备忘</strong>：自由文本，可参与全局搜索，适合记「怎么认识的、有什么偏好」。</li>
+</ul>
+<p>字段类型支持：文本、长文本、数字、复选框、单选、多选、日期（可含时间）、链接、联系方式、邮箱、地址、条码 / 名片码、附件、关联人脉。</p>
+<p>必填项由「字段管理」决定，字段旁显示红色 <code>*</code>（提示「XX 为必填」）；联系方式类必填要求至少填一项，另校验邮箱格式、数字上下限与日期合法性。校验失败会提示「请检查标红字段」。</p>
+<p>底部按钮：<strong>保存并继续添加</strong>、<strong>取消</strong>、<strong>保存</strong>。</p>
+<h3 id="52-">5.2 人脉列表</h3>
+<p>进入「人脉」页，可用四种视图（手机端无表格视图）：</p>
+<table>
+<thead>
+<tr>
+<th>视图</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>卡片</strong></td>
+<td>Wallet 名片堆叠效果，顶部为固定卡，点下方叠放卡可将其置顶。</td>
+</tr>
+<tr>
+<td><strong>宫格</strong></td>
+<td>一页多张名片卡，带 3D 倾斜动效。</td>
+</tr>
+<tr>
+<td><strong>表格</strong></td>
+<td>仅桌面端；可「配置列」（全选 / 全不选 / 恢复默认）、点表头排序、点单元格直接改字后「保存 / 撤销」。</td>
+</tr>
+<tr>
+<td><strong>关系网络</strong></td>
+<td>以图的方式查看人脉关联（详见第七章）。</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>搜索</strong>：搜索框「在结果中搜索…」，匹配姓名、拼音全拼 / 首字母、公司。</li>
+<li><strong>排序</strong>：最近互动 / 姓名拼音 / 添加时间 / 走动紧迫度。</li>
+<li><strong>筛选</strong>：见第八章。</li>
+</ul>
+<p>名片卡交互：点<strong>「查看背面信息」</strong>翻面；「更多」菜单含打开详情、拨打电话、复制电话、标记为已联系、删除联系人。表格视图支持 Shift 连选后批量打标签、改群组、设频率、导出、删除。</p>
+<h3 id="53-">5.3 人脉详情</h3>
+<p>点任一名片进入详情页，主要内容：</p>
+<table>
+<thead>
+<tr>
+<th>区块</th>
+<th>能做什么</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>头部</strong></td>
+<td>头像、姓名、群组、单位·职务·城市、上次互动、记录条数；可「记录互动」，更多菜单含编辑全部字段、与其他人脉合并、导出 vCard、显示空字段、删除联系人。</td>
+</tr>
+<tr>
+<td><strong>置顶备注</strong></td>
+<td>可置于页首，重要信息一眼可见。</td>
+</tr>
+<tr>
+<td><strong>字段信息</strong></td>
+<td>显示完整度百分比；「管理字段」可增删；逐字段点击即改，联系方式可拨打 / 复制 / 添加。</td>
+</tr>
+<tr>
+<td><strong>关系备忘</strong></td>
+<td>添加 / 编辑。</td>
+</tr>
+<tr>
+<td><strong>互动时间线</strong></td>
+<td>按全部 / 备注 / 联系 / 礼物 / 待办 / 纪念日过滤；可批量删除、单条置顶 / 删除。</td>
+</tr>
+<tr>
+<td><strong>联系频率</strong></td>
+<td>跟随视图 / 全局及各档天数。</td>
+</tr>
+<tr>
+<td><strong>关联待办</strong></td>
+<td>新建待办、完成、删除。</td>
+</tr>
+<tr>
+<td><strong>纪念日</strong></td>
+<td>添加（类型 / 名称 / 日期，可每年循环）、删除。</td>
+</tr>
+<tr>
+<td><strong>名片码</strong></td>
+<td>由姓名、公司、联系方式自动生成，扫码即可存入对方通讯录。</td>
+</tr>
+</tbody>
+</table>
+<p>「与其他人脉合并」流程：选人 → 逐字段对比 → 确认合并。</p>
+<hr />
+<h2 id="heading-7">六、互动、速记与待办</h2>
+<h3 id="61-">6.1 记录互动</h3>
+<p>记录入口分布在多处，按需选用：</p>
+<ul>
+<li>人脉详情页右上角「记录互动」；</li>
+<li>首页走动提醒里的「已联系」或「记录互动」；</li>
+<li>移动端快捷菜单「记录互动」；</li>
+<li>速记弹窗里选「电话沟通 / 见面 / 微信沟通 / 邮件 / 礼物」并保存。</li>
+</ul>
+<p>「记录互动」弹窗标题为「记录与「X」的互动」：选互动方式（默认电话，可「自定义」新增）；礼物类型需填「礼物内容 / 价值（元）」；正文填「这次聊了什么 / 补充说明」；可设「发生日期」与勾选「重置走动提醒计时」。按钮「取消 / 保存记录」。</p>
+<h3 id="62-">6.2 互动记录页</h3>
+<p>侧栏「互动记录」进入，是按天分组的全局时间线（今天 / 昨天 / 前天 / 具体日期，每天标注条数）：</p>
+<ul>
+<li><strong>搜索</strong>：搜索内容、联系人或渠道。</li>
+<li><strong>类别筛选</strong>：全部 / 联系 / 备注 / 礼物 / 待办 / 纪念日。</li>
+<li><strong>范围筛选</strong>：近 7 天 / 近 30 天 / 近 90 天 / 全部。</li>
+<li><strong>条数统计</strong>：页头显示近 7 天互动次数、覆盖人数、近 30 天次数（手机端压缩显示）。</li>
+<li><strong>单条操作</strong>：点头像 / 姓名查看联系人；「置顶到该联系人详情页 / 取消置顶」；「删除这条记录」。</li>
+<li>空态可「查看全部互动」或「去人脉页」。</li>
+</ul>
+<blockquote>
+<p>互动页不提供独立的新增按钮——记录在对应的人脉上产生，保证每条互动都有归属。</p>
+</blockquote>
+<h3 id="63-">6.3 速记</h3>
+<p>一个轻量输入框，适合想到就记：文本提示「刚聊了什么？一句话就够…」，选渠道（普通备注 / 电话沟通 / 见面 / 微信沟通 / 邮件 / 礼物），「关联到」会按内容推荐联系人，也可「从全部联系人中选择」。</p>
+<p>保存：<code>Ctrl / Cmd + Enter</code>；关闭：<code>Esc</code>。按钮「取消 / 保存到时间线」。</p>
+<h3 id="64-">6.4 待办中心</h3>
+<p>从首页待办卡点标题进入，标签页为：全部 / 进行中 / 逾期 / 已完成 / 回收站（均带数量）。</p>
+<ul>
+<li>按钮「新建待办」：填标题、关联人脉、截止日期、优先级（普通 / 重要）。</li>
+<li>每行可勾选完成、查看关联人、显示截止 / 逾期天数。</li>
+<li>「删除到回收站」后，在回收站内可「恢复」或「彻底删除」。</li>
+</ul>
+<hr />
+<h2 id="heading-8">七、关系网络</h2>
+<p>从人脉页的「关系网络」视图进入，顶部切换三种模式：</p>
+<table>
+<thead>
+<tr>
+<th>模式</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>全览</strong></td>
+<td>节点图，颜色按群组、大小按关联人数；90 天内有互动为实心，黑点代表「我」。点节点弹出预览（关联人数、上次互动），含「查看详情 / 记录互动」。滚轮缩放、拖动平移，右下有放大 / 缩小 / 重置视图。节点数超 200 时只显示最近互动的 200 人；手机端超 80 节点自动降级为只读列表。</td>
+</tr>
+<tr>
+<td><strong>引荐树</strong></td>
+<td>按「引荐人」字段构建的有向树，顶部显示直接认识人数与网络总人数；节点可展开 / 折叠，显示「带来 X 人」。检测到「引荐环」会提示去详情页调整。</td>
+</tr>
+<tr>
+<td><strong>两人之间</strong></td>
+<td>基于「关联人」字段计算最短路径，选「从」「到」后显示「找到一条关联路径（X 跳）」与共同关联人（上限 4 跳）；无路径时给出「弱关联参考」（共同群组 / 标签）。</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>关系网络为只读视图，不会改动你的人脉数据。</p>
+</blockquote>
+<hr />
+<h2 id="heading-9">八、搜索与智能视图</h2>
+<h3 id="81-">8.1 全局搜索</h3>
+<p>入口：顶栏搜索图标、移动端快捷菜单「全局搜索」或 <code>Ctrl / Cmd + K</code>。</p>
+<ul>
+<li>有关键词时按联系人聚合展示结果（姓名 + 群组 + 高亮片段）。</li>
+<li>无关键词时显示「搜索历史」（可清空）、「最近查看」、「最近添加」。</li>
+<li>搜索覆盖：姓名及拼音、公司、标签、备注、字段值与附件名。</li>
+<li><code>↑</code> <code>↓</code> 切换结果，<code>Enter</code> 打开，<code>Esc</code> 关闭。</li>
+</ul>
+<h3 id="82-">8.2 筛选与智能视图</h3>
+<p>人脉页「筛选」面板支持：</p>
+<ul>
+<li><strong>条件组合</strong>：字段 = 全部字段 + 虚拟字段（互动活跃度、添加时间、生日月份、字段完整度）；支持「且 / 或」、嵌套条件组、「非」取反。</li>
+<li><strong>快速筛选</strong>：按群组过滤。</li>
+<li><strong>命中漏斗</strong>：实时显示筛选命中过程。</li>
+<li>底部按钮：「全部清除 / 保存为智能视图 / 应用（N 人）」。</li>
+</ul>
+<p>「保存为智能视图」后，该视图出现在侧栏的「智能视图」分组，可长期复用。在「设置 → 智能视图」里可设置某视图「用于走动提醒」（系统视图不可改），并查看与其他视图的重叠人数。</p>
+<hr />
+<h2 id="heading-10">九、我的名片</h2>
+<p>侧栏底部或个人入口进入「我的名片」，页面提示「信息随数据包带走，不进服务器」。</p>
+<ul>
+<li>点头像旁的相机按钮上传头像。</li>
+<li>填写昵称（必填）、公司 / 单位、城市、电话、邮箱（校验格式）。</li>
+<li>「分享与导出」：<strong>导出 vCard</strong>（导入通讯录）、<strong>复制名片文字</strong>（粘贴到聊天做自我介绍）。</li>
+</ul>
+<hr />
+<h2 id="heading-11">十、设置</h2>
+<p>移动端设置为两级菜单：一级为分组清单（图标 + 名称 + 一句说明 + 右箭头），点进二级页后顶部点「设置」返回。共 10 个分组：</p>
+<table>
+<thead>
+<tr>
+<th>分组</th>
+<th>主要设置</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>我的信息</strong></td>
+<td>昵称、头像与简介（随数据包导出）</td>
+</tr>
+<tr>
+<td><strong>外观</strong></td>
+<td>主题、主题色、对比度、首页卡片顺序</td>
+</tr>
+<tr>
+<td><strong>字段管理</strong></td>
+<td>自定义字段的增删改、顺序与必填</td>
+</tr>
+<tr>
+<td><strong>数据包管理</strong></td>
+<td>当前文件状态、打开 / 另存 / 关闭 / 重新授权、加密、快照</td>
+</tr>
+<tr>
+<td><strong>导入导出</strong></td>
+<td>CSV / vCard 导入、数据包合并、多格式导出、名片册打印</td>
+</tr>
+<tr>
+<td><strong>提醒策略</strong></td>
+<td>默认联系频率、提醒时间、纪念日提前量、降权与系统通知</td>
+</tr>
+<tr>
+<td><strong>智能视图</strong></td>
+<td>视图的提醒用途、查看 / 编辑 / 删除</td>
+</tr>
+<tr>
+<td><strong>数据健康</strong></td>
+<td>缺失项与重复项体检、缓存清理</td>
+</tr>
+<tr>
+<td><strong>隐私与安全</strong></td>
+<td>应用锁 PIN、备份提醒、清除所有数据</td>
+</tr>
+<tr>
+<td><strong>关于存知</strong></td>
+<td>版本、开发者、官网、交互样张、数据与隐私说明</td>
+</tr>
+</tbody>
+</table>
+<h3 id="101-">10.1 外观</h3>
+<ul>
+<li><strong>主题</strong>：跟随系统 / 浅色 / 深色。</li>
+<li><strong>主题色</strong>：靛蓝（默认）、素白、松绿、远海、梅紫、珊瑚、竹青、青碧、玫红，另有「自定义」取色。</li>
+<li><strong>提高全局对比度</strong>：文字更深、描边更实，强光下更清楚。</li>
+<li><strong>首页卡片顺序</strong>（仅手机端）：待办事项 / 走动提醒 / 纪念日，可上移下移。</li>
+</ul>
+<h3 id="102-">10.2 数据包管理</h3>
+<p>「当前数据包」显示文件名、修订号、最后保存、人脉数量、数据体积、格式版本与状态（已保存 / 有未保存更改 / 保存中 / 保存失败 / 未关联文件）。</p>
+<ul>
+<li><strong>打开数据包 / 另存为 / 关闭数据包 / 重新授权</strong>。</li>
+<li><strong>口令加密数据包</strong>：AES-GCM 加密，口令至少 6 位，默认关闭。<strong>忘记口令无法恢复</strong>。</li>
+<li><strong>快照</strong>：加载超过 24 小时自动生成，最多保留 5 份；可「立即快照」与「恢复」。</li>
+<li><strong>字段变更审计</strong>：保留最近 200 条。</li>
+</ul>
+<p>保存异常时界面会出现横幅，提供「重试 / 重新授权」「另存为」「导出覆盖」；若检测到文件在外部被修改，会弹出冲突处理框：「另存为 / 重新加载文件 / 用本地版本覆盖」——存知不会静默覆盖你的任何一份数据。</p>
+<h3 id="103-">10.3 导入导出</h3>
+<ul>
+<li><strong>导入</strong>：CSV / vCard，三步向导「上传预览 → 字段映射 → 冲突处理」，上限 2000 条；冲突可选跳过重复项 / 覆盖现有记录 / 作为新记录。支持「下载 CSV 模板」。</li>
+<li><strong>合并导入数据包</strong>：<code>.czdb</code> / JSON，按记录级合并，冲突逐字段确认，不静默覆盖。</li>
+<li><strong>导出</strong>：完整数据包 <code>.czdb</code>、CSV 表格、JSON 完整快照、vCard 名片。</li>
+<li><strong>名片册打印</strong>：每页 6 张，首页为「我的名片」封面。</li>
+</ul>
+<h3 id="104-">10.4 提醒策略</h3>
+<ul>
+<li><strong>默认联系频率</strong>：7 / 14 / 30 / 60 / 90 / 180 / 365 天（默认 30）。</li>
+<li><strong>每日提醒时间</strong>：设定一个时间点。</li>
+<li><strong>纪念日提前提醒</strong>：1 / 2 / 3 / 5 / 7 天。</li>
+<li><strong>连续忽略降低权重</strong>：连续两次忽略同一人的提醒，第三次自动降权，避免提醒疲劳。</li>
+<li><strong>浏览器系统通知</strong>：点「申请授权」；未授权时降级为应用内提示。</li>
+</ul>
+<blockquote>
+<p>频率优先级：<strong>个人级 &gt; 智能视图级 &gt; 全局默认</strong>。</p>
+</blockquote>
+<h3 id="105-">10.5 字段管理</h3>
+<p>增删自定义字段、调整顺序、设定必填与字段类型。首页卡片、人脉表单、筛选条件会同步使用这些字段。开启必填后，编辑表单里对应字段会显示红色 <code>*</code>。</p>
+<h3 id="106-">10.6 数据健康</h3>
+<p>点「开始体检」，检查项包括：缺少电话 / 邮箱 / 头像、疑似重复、超过 90 天无互动、生日 30 天内但未设纪念日、引用了已删除联系人。可「清理缓存」，疑似重复联系人可「去合并」。</p>
+<h3 id="107-">10.7 隐私与安全</h3>
+<ul>
+<li><strong>数据存储位置</strong>：本地。</li>
+<li><strong>锁定应用（PIN）</strong>：设置 4 位 PIN / 取消 PIN / 立即锁定；忘记 PIN 可「继续使用（数据仍在本机）」。</li>
+<li><strong>备份提醒</strong>：显示已备份 / 未备份与上次备份时间。</li>
+<li><strong>清除所有数据</strong>：危险操作，需输入「删除所有数据」确认，不可恢复。</li>
+</ul>
+<h3 id="108-">10.8 关于存知</h3>
+<p>显示版本信息（Beta V1.0 · 浏览器版）、开发者、联系方式与软件官网，并提供一个可拖动的「弹性面板缩放」交互样张，以及数据与隐私说明。</p>
+<hr />
+<h2 id="heading-12">十一、数据安全与常见问题</h2>
+<h3 id="heading-13">数据安全</h3>
+<ul>
+<li>所有数据只写在你选中的 <code>.czdb</code> 文件里，不上传服务器、不注册账号。</li>
+<li>建议把数据包放在本地文件夹并开启自动回写；重要数据可定期用「立即快照」或「导出完整数据包」备份。</li>
+<li>需要更高安全等级时开启「口令加密数据包」，但请务必记住口令——忘记后无法恢复。</li>
+<li>登录 / 支付类需求不在本应用范围；应用不收集、不上传你的通讯录内容。</li>
+</ul>
+<h3 id="heading-14">常见问题</h3>
+<table>
+<thead>
+<tr>
+<th>问题</th>
+<th>处理</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>首次进入想先熟悉功能</td>
+<td>从启动页「先看看演示数据」进入体验态，随时用顶栏「结束体验，正式使用」清空。</td>
+</tr>
+<tr>
+<td>换设备继续用</td>
+<td>在新设备打开「打开本地数据包」并选择原 <code>.czdb</code> 文件；加密包需输入口令。</td>
+</tr>
+<tr>
+<td>担心浏览器缓存丢数据</td>
+<td>在「设置 → 数据包管理 → 选择本地文件夹」把数据落到硬盘；开启加密更安全。</td>
+</tr>
+<tr>
+<td>提示「文件被外部修改」</td>
+<td>在冲突框里选择另存为、重新加载或用本地版本覆盖，存知不会静默覆盖。</td>
+</tr>
+<tr>
+<td>找不到某条互动的记录入口</td>
+<td>互动记录页不提供新增；请到对应人脉详情页点「记录互动」，或用「速记」。</td>
+</tr>
+<tr>
+<td>忘记 PIN</td>
+<td>锁屏页点「忘记 PIN？继续使用（数据仍在本机）」；之后在设置里重设。</td>
+</tr>
+<tr>
+<td>界面显示旧版本</td>
+<td>用 <code>Ctrl / Cmd + Shift + R</code> 强制刷新浏览器缓存。</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<blockquote>
+<p>本手册对应 Beta V1.0 浏览器版，界面文案以应用内实际显示为准。功能持续迭代，最新说明请关注「设置 → 关于存知」。</p>
+</blockquote>
+
+  </div>
+
+  
+  <nav class="post-nav">
+    
+    <a href="/post/interplabprdv1.1/" class="post-nav-card post-nav-card--prev">
+      
+      <div class="post-nav-card__img">
+        <img src="https://blog-1257076412.cos.ap-beijing.myqcloud.com/InterpLab%E4%BA%A7%E5%93%81%E7%BD%91%E7%AB%99%E5%B1%95%E7%A4%BA%E5%9B%BE%E7%94%9F%E6%88%90.png" alt="Interplab-口译训练平台 PRD（v1.1）" loading="lazy" />
+      </div>
+      
+      <div class="post-nav-card__body">
+        <span class="post-nav-card__label meta-text">上一篇</span>
+        <span class="post-nav-card__title">Interplab-口译训练平台 PRD（v1.1）</span>
+      </div>
+      <span class="post-nav-card__arrow">&larr;</span>
+    </a>
+    
+    
+    <a href="/post/2026-restart/" class="post-nav-card post-nav-card--next">
+      <div class="post-nav-card__body">
+        <span class="post-nav-card__label meta-text">下一篇</span>
+        <span class="post-nav-card__title">2026，重启人生</span>
+      </div>
+      
+      <div class="post-nav-card__img">
+        <img src="https://blog-1257076412.cos.ap-beijing.myqcloud.com/H-Scandinavia_seaside.jpg" alt="2026，重启人生" loading="lazy" />
+      </div>
+      
+      <span class="post-nav-card__arrow">&rarr;</span>
+    </a>
+    
+  </nav>
+
+  
+  
+
+
+</article>
+
+  </main>
+
+  <footer class="site-footer">
+  <div class="footer-inner">
+
+    
+    
+    <nav class="footer-nav" aria-label="页脚导航">
+      
+      <a class="footer-nav__link" href="/">首页</a>
+      
+      <a class="footer-nav__link" href="/post">博客</a>
+      
+      <a class="footer-nav__link" href="/memos">闪念</a>
+      
+      <a class="footer-nav__link" href="/archives">归档</a>
+      
+      <a class="footer-nav__link" href="/tags">标签</a>
+      
+      <a class="footer-nav__link" href="https://blog.evanhub.cn/interplab/">Interplab</a>
+      
+      <a class="footer-nav__link" href="/links">友链</a>
+      
+      <a class="footer-nav__link" href="/post/about">关于</a>
+      
+    </nav>
+    
+
+    
+    <div class="footer-social">
+      
+      
+      
+      <a class="footer-social__link" href="https://weibo.com/u/9138844902" target="_blank" rel="noopener noreferrer"
+        aria-label="微博">
+        <svg width="20" height="20" viewBox="0 0 16 16" fill="currentColor">
+          <path d="M10.878 1.093a4.23 4.23 0 0 1 4.031 1.305 4.22 4.22 0 0 1 .886 4.14v.001a.612.612 0 0 1-1.166-.377 3.01 3.01 0 0 0-3.495-3.873.611.611 0 1 1-.256-1.196M3.753 9.465c.548-1.11 1.972-1.74 3.233-1.411 1.304.338 1.971 1.568 1.437 2.764-.541 1.221-2.095 1.875-3.416 1.449-1.271-.411-1.812-1.67-1.254-2.802m2.658.567c.16.066.365-.009.458-.168.088-.16.03-.34-.129-.397-.156-.062-.353.013-.446.168-.09.154-.041.333.117.397m-1.607 1.314c.413.188.963.009 1.219-.4.252-.413.12-.883-.296-1.062-.41-.172-.94.005-1.194.402-.256.4-.135.874.271 1.06"/>
+          <path d="m12.014 7.238.005.001c.919.285 1.941.974 1.939 2.188 0 2.007-2.895 4.535-7.246 4.535C3.393 13.962 0 12.352 0 9.708c0-1.385.876-2.985 2.384-4.493C4.4 3.199 6.751 2.28 7.634 3.165c.39.392.427 1.065.177 1.87-.132.405.38.182.38.182 1.63-.682 3.051-.722 3.57.02.278.397.252.951-.004 1.594-.116.293.035.34.257.407m-10.4 3.101c.172 1.738 2.46 2.936 5.109 2.674 2.647-.26 4.656-1.883 4.482-3.623-.17-1.738-2.458-2.937-5.107-2.674-2.647.263-4.656 1.883-4.484 3.623m11.681-6.484a2.06 2.06 0 0 0-1.962-.634.526.526 0 1 0 .219 1.031 1.008 1.008 0 0 1 1.17 1.296.528.528 0 0 0 1.005.325 2.06 2.06 0 0 0-.432-2.018"/>
+        </svg>
+      </a>
+      
+      <a class="footer-social__link" href="/feed.xml" aria-label="RSS">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M6.18 15.64a2.18 2.18 0 110 4.36 2.18 2.18 0 010-4.36zM4 4.44A15.56 15.56 0 0119.56 20h-2.83A12.73 12.73 0 004 7.27V4.44zm0 5.66a9.9 9.9 0 019.9 9.9h-2.83A7.07 7.07 0 004 12.93V10.1z"/>
+        </svg>
+      </a>
+    </div>
+
+    
+    <div class="footer-copyright">
+      <p>&copy; 2026 Evan&#39;s Blog. All rights reserved.</p>
+    </div>
+
+    
+    
+
+    
+    <div class="footer-powered">
+      <span>Powered by <a href="https://gridea.pro" target="_blank" rel="noopener noreferrer">Gridea Pro</a></span>
+    </div>
+
+  </div>
+</footer>
+
+  
+  <div class="search-overlay" id="searchOverlay" style="display:none;">
+  <div class="search-modal">
+    <div class="search-header">
+      <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="11" cy="11" r="8"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+      <input type="text" class="search-input" id="searchInput" placeholder="搜索文章..." autocomplete="off" />
+      <span class="search-kbd">&#8984;K</span>
+      <button class="search-close" id="searchClose" type="button" aria-label="关闭搜索">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    <div class="search-results" id="searchResults"></div>
+  </div>
+</div>
+
+<script src="/scripts/search.js"></script>
+  
+
+  
+
+  
+  <style>/* 引入字体 */
+@import url('https://fonts.font.im/css2?family=Noto+Serif+SC:wght@400;500;600;700&family=Spectral:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+/* 标题、文章标题、侧边栏标题 */
+h1, h2, h3, h4, h5, h6, 
+.post-card__title, 
+.section-title,
+.sidebar__title,
+/* 👇 这里加入网站名称的可能类名 */
+.site-name-link, 
+.logo-text,
+.site-header .logo a,
+header a.title {
+    font-size: 24px; /* 扩大字号，数值可按需修改 */
+    font-family: 'Spectral', 'Noto Serif SC', serif !important;
+}
+
+
+#gridea-preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff; /* 你可以换成任何背景色，如 #1a1a1a 适配暗色主题 */
+  z-index: 99999; /* 确保覆盖在所有内容之上 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+
+#gridea-preloader.gridea-preloader-hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.gridea-preloader-spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid #e0e0e0; /* 圆环的底色 */
+  border-top-color: #333333; /* 旋转部分的颜色，可改为你的主题色 */
+  border-radius: 50%;
+  animation: gridea-spin 0.8s linear infinite;
+}
+
+@keyframes gridea-spin {
+  to { transform: rotate(360deg); }
+}</style>
+  
+
+  
+  <script>window.addEventListener('load', function() {
+  var preloader = document.getElementById('gridea-preloader');
+  if (preloader) {
+    preloader.classList.add('gridea-preloader-hidden');
+    // 等待 CSS 过渡动画结束后，从 DOM 中移除元素
+    setTimeout(function() {
+      if (preloader.parentNode) {
+        preloader.parentNode.removeChild(preloader);
+      }
+    }, 600); // 与 CSS 中的 transition 时长保持一致
+  }
+});</script>
+  
+
+<script>console.log("\n%c ✦ Gridea Pro v1.3.0-beta.2 %c · Theme: flavor-theme v1.0.0 · https://gridea.pro %c\n","color:#fadfa3;background:#111111;padding:9px 14px;border-radius:4px 0 0 4px;font-weight:500;font-size:12px","color:#e05c00;background:#fff3ec;padding:9px 14px;border-radius:0 4px 4px 0;font-size:11px","")</script>
+</body>
+</html>
